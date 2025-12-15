@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
+/* Import custom fonts */
+@font-face {
+  font-family: 'Niconne';
+  src: url('/Niconne-Regular.ttf') format('truetype');
+}
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --savannah-green: #556B2F;
+  --sunset-orange: #FF8C00;
+  --earth-brown: #8B4513;
+
+  /* Secondary Colors */
+  --sand-beige: #D2B48C;
+  --sky-blue: #87CEEB;
+  --golden-yellow: #FFD700;
+
+  /* Neutrals */
+  --charcoal-gray: #333333;
+  --ivory-white: #FFFFF0;
+
+  /* Typography */
+  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Georgia', serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* -------------------------
+   Global Styles
+------------------------- */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+  color: var(--charcoal-gray);
+  background-color: var(--ivory-white);
+  line-height: 1.6;
+}
+
+/* -------------------------
+   Headings
+------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  margin-bottom: 0.5rem;
+}
+
+
+/* -------------------------
+   Links
+------------------------- */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--golden-yellow);
+}
+
+/* -------------------------
+   Buttons
+------------------------- */
+button {
+  background-color: var(--earth-brown);
+  color: var(--ivory-white);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--sand-beige);
+}
+
+/* -------------------------
+   Containers
+------------------------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* -------------------------
+   Utility Classes
+------------------------- */
+.text-center {
+  text-align: center;
+}
+
+.bg-sand {
+  background-color: var(--sand-beige);
+}
+
+.bg-sky {
+  background-color: var(--sky-blue);
+}
+
+.text-gold {
+  color: var(--golden-yellow);
+}
+
+/* -------------------------
+   Safari Imagery Elements
+------------------------- */
+.card {
+  background-color: var(--ivory-white);
+  border: 1px solid var(--earth-brown);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
 }
