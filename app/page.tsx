@@ -1,17 +1,21 @@
-'use client';
+import PopularItineraries from "./components/PopularItineraries";
+import Destinations from "./components/Destinations";
+import Testimonials from "./components/Testimonials";
 
+import AboutUs from "./aboutus/page";
+import Footer from "./components/Footer";
 import AdventureHero from "./pages/hero/page";
 import MapPage from "./pages/map/page";
-import Navbar from "./pages/nav/page";
-import PopularPackages from "./pages/packages/page";
 
 export default function Home() {
   return (
     <>
-    <Navbar />
-    <AdventureHero />
-    <MapPage />
-    <PopularPackages />
+      <AdventureHero />
+      <MapPage />
+      <PopularItineraries />
+      <Destinations />
+      <AboutUs />
+      <Testimonials />
     </>
   );
 }

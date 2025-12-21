@@ -1,165 +1,169 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, Mountain, Search, User } from 'lucide-react';
+import { Menu, X, Mountain, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
+
+  const navLinks = [
+    { label: 'HOME', href: '/' },
+    { label: 'TOURS', href: '/tours' },
+    { label: 'GALLERY', href: '/gallery' },
+    { label: 'ABOUT US', href: '/aboutus' },
+    { label: 'CONTACT US', href: '/contact' },
+  ];
+
+  const destinations = [
+    { label: 'SERENGETI', href: '/destinations#serengeti' },
+    { label: 'NGORONGORO', href: '/destinations#ngorongoro' },
+    { label: 'TARANGIRE', href: '/destinations#tarangire' },
+    { label: 'LAKE MANYARA', href: '/destinations#manyara' },
+    { label: 'KILIMANJARO', href: '/destinations#kilimanjaro' },
+    { label: 'ZANZIBAR', href: '/destinations#zanzibar' },
+  ];
 
   return (
-    <nav className="bg-[#475235]/40 backdrop-blur-md shadow-lg fixed top-0 z-50 w-full py-4 px-4 sm:px-6 lg:px-8 border-b border-white/10">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between w-full">
+    <nav className="bg-[#475235]/40 backdrop-blur-md shadow-lg fixed top-0 z-50 w-full border-b border-white/10">
+      <div className="w-full">
+        {/* Main navbar container */}
+        <div className="flex h-16 sm:h-20 items-center justify-between px-3 sm:px-6 lg:px-8">
 
-          {/* LEFT — LOGO */}
-          <div className="flex items-center space-x-2 shrink-0">
-            <Mountain className="h-8 w-8 text-orange-500" />
+          {/* LOGO */}
+          <Link href="/" className="flex items-center space-x-2 shrink-0">
+            <Mountain className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
             <span
-              className='text-white font-extrabold sm:10xl md:15xl lg:6lg'
+              className='hidden xs:inline text-white font-extrabold text-sm sm:text-base md:text-lg'
               style={{ fontFamily: 'Shadows into Light Two' }}
             >
               FLEXI WILD SAFARI
             </span>
-          </div>
+            <span
+              className='xs:hidden text-white font-extrabold text-xs'
+              style={{ fontFamily: 'Shadows into Light Two' }}
+            >
+              FLEXI
+            </span>
+          </Link>
 
-          {/* CENTER — NAVIGATION */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-20 flex-1 justify-center">
-            <a href="#home" className="group relative text-white hover:text-orange-500 transition-colors duration-300">
-              <span>HOME</span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+          {/* DESKTOP NAVIGATION */}
+          <div className="hidden lg:flex items-center space-x-1 flex-1 justify-center">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="group relative px-3 xl:px-4 py-2 text-white text-sm font-medium hover:text-orange-500 transition-colors duration-300"
+              >
+                <span>{link.label}</span>
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
 
-            <div className="group relative">
-              <button className="flex items-center space-x-1 text-white hover:text-orange-500 transition-colors duration-300">
+            {/* Desktop Destinations Dropdown */}
+            <div className="group relative px-3 xl:px-4 py-2">
+              <button className="flex items-center space-x-1 text-white text-sm font-medium hover:text-orange-500 transition-colors duration-300">
                 <span>DESTINATIONS</span>
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
-
-              {/* Dropdown */}
-              <div className="absolute left-0 mt-2 w-48 rounded-lg bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <a href="#mountains" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  NGORONGORO
-                </a>
-                <a href="#beaches" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  SERENGETI
-                </a>
-                <a href="#forests" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  TARANGIRE
-                </a>
-                <a href="#deserts" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  MANYARA
-                </a>
-                <a href="" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  KILIMANJARO
-                </a>
+              <div className="absolute left-0 mt-0 w-56 rounded-lg bg-white/95 backdrop-blur shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+                {destinations.map((dest) => (
+                  <Link
+                    key={dest.label}
+                    href={dest.href}
+                    className="block px-4 py-2.5 text-gray-700 text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                  >
+                    {dest.label}
+                  </Link>
+                ))}
               </div>
             </div>
-
-            <a href="#tours" className="group relative text-white hover:text-orange-500 transition-colors duration-300">
-              <span>TOURS</span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-
-            <a href="#gallery" className="group relative text-white hover:text-orange-500 transition-colors duration-300">
-              <span>GALLERY</span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-
-            <a href="#blog" className="group relative text-white hover:text-orange-500 transition-colors duration-300">
-              <span>ABOUT US</span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-
-            <a href="#contact" className="group relative text-white hover:text-orange-500 transition-colors duration-300">
-              <span>CONTACT US</span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
           </div>
 
-          {/* RIGHT — BOOK BUTTON */}
-          <div className="hidden lg:flex items-center space-x-4 lg:ml-auto">
-            <button className="rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-orange-600 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          {/* DESKTOP BOOK BUTTON */}
+          <div className="hidden lg:flex items-center">
+            <Link href="/book" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
               BOOK ADVENTURE
-            </button>
+            </Link>
           </div>
 
-          {/* MOBILE MENU */}
+          {/* MOBILE MENU BUTTON */}
           <div className="flex items-center space-x-2 lg:hidden">
             <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="rounded-full p-2 text-white hover:bg-white/10"
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+                setIsDestinationsOpen(false);
+              }}
+              className="rounded-md p-2 text-white hover:bg-white/10 focus:outline-none transition-colors"
+              aria-label="Toggle menu"
             >
-              <Search className="h-5 w-5" />
-            </button>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="rounded-md p-2 text-white hover:bg-white/10 focus:outline-none"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden bg-slate-800 border-t border-slate-700 uppercase">
-          <div className="space-y-1 px-4 pb-4 pt-2">
-            <a
-              href="#home"
-              className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              HOME
-            </a>
+        {/* MOBILE MENU */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-slate-800/95 backdrop-blur-sm border-t border-white/10 animate-in fade-in duration-200">
+            <div className="px-3 sm:px-6 py-3 space-y-1 max-h-[calc(100vh-80px)] overflow-y-auto">
+              {/* Mobile Nav Links */}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
 
-            <div className="space-y-1">
-              <div className="px-4 py-2 text-sm font-semibold text-gray-400">
-                DESTINATIONS
+              {/* Mobile Destinations Dropdown */}
+              <div className="space-y-1">
+                <button
+                  onClick={() => setIsDestinationsOpen(!isDestinationsOpen)}
+                  className="w-full text-left rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors flex items-center justify-between"
+                >
+                  <span>DESTINATIONS</span>
+                  <ChevronDown
+                    className={`h-5 w-5 transition-transform ${isDestinationsOpen ? 'rotate-180' : ''
+                      }`}
+                  />
+                </button>
+
+                {isDestinationsOpen && (
+                  <div className="space-y-1 bg-slate-700/50 rounded-lg p-2 ml-2">
+                    {destinations.map((dest) => (
+                      <Link
+                        key={dest.label}
+                        href={dest.href}
+                        className="block rounded px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsDestinationsOpen(false);
+                        }}
+                      >
+                        {dest.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-              <a href="#mountains" className="block rounded-lg px-4 py-2 pl-8 text-base text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-                NGORONGORO
-              </a>
-              <a href="#beaches" className="block rounded-lg px-4 py-2 pl-8 text-base text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-                SERENGETI
-              </a>
-              <a href="#forests" className="block rounded-lg px-4 py-2 pl-8 text-base text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-                TARANGIRE
-              </a>
-              <a href="#deserts" className="block rounded-lg px-4 py-2 pl-8 text-base text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-                MANYARA
-              </a>
-              <a href="" className='block rounded-lg px-4 py-2 pl-8 text-base text-white hover:bg-white/10'>
-                KILIMANJARO
-              </a>
-            </div>
 
-            <a href="#tours" className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-              TOURS
-            </a>
-
-            <a href="#gallery" className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-              GALLERY
-            </a>
-
-            <a href="#blog" className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-              ABOUT US
-            </a>
-
-            <a href="#contact" className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
-              CONTACT US
-            </a>
-
-            <div className="flex flex-col space-y-2 pt-4">
-              <button className="rounded-lg bg-orange-500 px-4 py-3 text-base font-semibold text-white hover:bg-orange-600">
-                BOOK ADVENTURE
-              </button>
+              {/* Mobile Book Button */}
+              <div className="pt-3 border-t border-white/10">
+                <Link href="/book" className="block rounded-lg bg-orange-500 px-4 py-3 text-base font-semibold text-white hover:bg-orange-600 transition-colors">
+                  BOOK ADVENTURE                  
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 }
