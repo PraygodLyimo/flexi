@@ -98,11 +98,11 @@ export default function PopularItineraries() {
                 {/* Details */}
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-gray-700 text-sm">
-                    <MapPin className="h-4 w-4 text-orange-500 mr-2" />
+                    <MapPin className="h-4 w-4 mr-2" style={{ color: '#c89b5e' }} />
                     {itinerary.destination}
                   </div>
                   <div className="flex items-center text-gray-700 text-sm">
-                    <Star className="h-4 w-4 text-orange-500 mr-2" />
+                    <Star className="h-4 w-4 mr-2" style={{ color: '#c89b5e' }} />
                     <span className="font-semibold">{itinerary.rating}</span>
                     <span className="text-gray-500 ml-1">({itinerary.reviews} reviews)</span>
                   </div>
@@ -113,7 +113,8 @@ export default function PopularItineraries() {
                   {itinerary.highlights.map((highlight, idx) => (
                     <span
                       key={idx}
-                      className="bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full"
+                      className="text-xs font-semibold px-3 py-1 rounded-full"
+                      style={{ backgroundColor: '#f7e6cc', color: '#947846' }}
                     >
                       {highlight}
                     </span>
@@ -130,7 +131,7 @@ export default function PopularItineraries() {
                       </p>
                     </div>
                   </div>
-                  <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                  <button className="w-full font-bold py-3 px-4 rounded-lg transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
                     View Details
                   </button>
                 </div>

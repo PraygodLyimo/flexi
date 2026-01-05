@@ -119,10 +119,10 @@ export default function ToursPage() {
       <Navbar />
       <div className="min-h-screen bg-white pt-24">
         {/* Page Header */}
-        <section className="bg-linear-to-r from-gray-900 to-gray-800 text-white py-16">
+        <section className="text-[#947846] py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-5xl font-bold mb-4">Our Safari Tours</h1>
-            <p className="text-xl text-gray-300">
+            <h1 className="text-5xl font-bold mb-4" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>Our Safari Tours</h1>
+            <p className="text-xl text-[#947246]" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>
               Carefully curated itineraries for unforgettable African experiences
             </p>
           </div>
@@ -138,36 +138,36 @@ export default function ToursPage() {
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                   {/* Left - Content */}
-                  <div className="lg:col-span-2 p-8 lg:p-12">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">{tour.title}</h2>
-                    <p className="text-xl text-gray-600 mb-6">{tour.description}</p>
-                    <p className="text-gray-700 mb-8 leading-relaxed">{tour.fullDescription}</p>
+                  <div className="lg:col-span-2 p-8 lg:p-12 text-[#947846]">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>{tour.title}</h2>
+                    <p className="text-xl text-gray-600 mb-6" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>{tour.description}</p>
+                    <p className="text-gray-700 mb-8 leading-relaxed" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>{tour.fullDescription}</p>
 
                     {/* Quick Info */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                       <div className="flex items-center space-x-2">
-                        <Calendar className="h-5 w-5 text-orange-500" />
+                        <Calendar className="h-5 w-5" style={{ color: '#c89b5e' }} />
                         <div>
                           <p className="text-xs text-gray-600">Duration</p>
                           <p className="font-bold text-gray-900">{tour.duration}</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Users className="h-5 w-5 text-orange-500" />
+                        <Users className="h-5 w-5" style={{ color: '#c89b5e' }} />
                         <div>
                           <p className="text-xs text-gray-600">Group Size</p>
                           <p className="font-bold text-gray-900">{tour.groupSize}</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <MapPin className="h-5 w-5 text-orange-500" />
+                        <MapPin className="h-5 w-5" style={{ color: '#c89b5e' }} />
                         <div>
                           <p className="text-xs text-gray-600">Destinations</p>
                           <p className="font-bold text-gray-900">{tour.destinations}</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Star className="h-5 w-5 text-orange-500" />
+                        <Star className="h-5 w-5" style={{ color: '#c89b5e' }} />
                         <div>
                           <p className="text-xs text-gray-600">Rating</p>
                           <p className="font-bold text-gray-900">{tour.rating} ({tour.reviews})</p>
@@ -180,7 +180,7 @@ export default function ToursPage() {
                       <h3 className="font-bold text-gray-900 mb-3">Highlights</h3>
                       <div className="flex flex-wrap gap-2">
                         {tour.highlights.map((highlight, idx) => (
-                          <span key={idx} className="bg-orange-100 text-orange-700 text-sm font-semibold px-3 py-1 rounded-full">
+                          <span key={idx} className="text-sm font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: '#f7e6cc', color: '#947846' }}>
                             {highlight}
                           </span>
                         ))}
@@ -193,7 +193,7 @@ export default function ToursPage() {
                       <div className="grid grid-cols-2 gap-3">
                         {tour.included.map((item, idx) => (
                           <div key={idx} className="flex items-center text-gray-700">
-                            <span className="text-orange-500 mr-2">✓</span>
+                            <span className="mr-2" style={{ color: '#c89b5e' }}>✓</span>
                             {item}
                           </div>
                         ))}
@@ -207,7 +207,7 @@ export default function ToursPage() {
                         {tour.itinerary.map((item, idx) => (
                           <div key={idx} className="flex space-x-4">
                             <div className="shrink-0">
-                              <div className="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500 text-white font-bold">
+                              <div className="flex items-center justify-center h-10 w-10 rounded-full text-white font-bold" style={{ backgroundColor: '#c89b5e' }}>
                                 {item.day}
                               </div>
                             </div>
@@ -231,10 +231,10 @@ export default function ToursPage() {
                       <p className="text-gray-600 text-sm mb-8">Per person (shared accommodation)</p>
 
                       <div className="space-y-4">
-                        <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                        <button className="w-full font-bold py-3 px-4 rounded-lg transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
                           Book This Tour
                         </button>
-                        <button className="w-full border-2 border-orange-500 text-orange-600 font-bold py-3 px-4 rounded-lg hover:bg-orange-50 transition-colors">
+                        <button className="w-full border-2 font-bold py-3 px-4 rounded-lg transition-colors" style={{ borderColor: '#947846', color: '#ffffffff' }}>
                           Customize Itinerary
                         </button>
                       </div>
@@ -244,7 +244,7 @@ export default function ToursPage() {
                       <p className="text-gray-700 text-sm mb-4">
                         Have questions? Our experts are ready to help!
                       </p>
-                      <a href="mailto:info@flexisafaris.com" className="text-orange-600 font-bold hover:text-orange-700">
+                      <a href="mailto:info@flexisafaris.com" className="font-bold" style={{ color: '#947846' }}>
                         info@flexisafaris.com
                       </a>
                     </div>
@@ -255,7 +255,6 @@ export default function ToursPage() {
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }

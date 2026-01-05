@@ -9,9 +9,9 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'HOME', href: '/' },
+    { label: 'ABOUT US', href: '/aboutus' },
     { label: 'TOURS', href: '/tours' },
     { label: 'GALLERY', href: '/gallery' },
-    { label: 'ABOUT US', href: '/aboutus' },
     { label: 'CONTACT US', href: '/contact' },
   ];
 
@@ -32,7 +32,7 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center space-x-2 shrink-0">
-            <Mountain className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
+            <Mountain className="h-6 w-6 sm:h-8 sm:w-8" style={{ color: '#c89b5e' }} />
             <span
               className='hidden xs:inline text-white font-extrabold text-sm sm:text-base md:text-lg'
               style={{ fontFamily: 'Shadows into Light Two' }}
@@ -53,16 +53,16 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative px-3 xl:px-4 py-2 text-white text-sm font-medium hover:text-orange-500 transition-colors duration-300"
+                className="group relative px-3 xl:px-4 py-2 text-white text-sm font-medium transition-colors duration-300"
               >
                 <span>{link.label}</span>
-                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: '#c89b5e' }}></span>
               </Link>
             ))}
 
             {/* Desktop Destinations Dropdown */}
             <div className="group relative px-3 xl:px-4 py-2">
-              <button className="flex items-center space-x-1 text-white text-sm font-medium hover:text-orange-500 transition-colors duration-300">
+              <button className="flex items-center space-x-1 text-white text-sm font-medium transition-colors duration-300">
                 <span>DESTINATIONS</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -71,7 +71,7 @@ export default function Navbar() {
                   <Link
                     key={dest.label}
                     href={dest.href}
-                    className="block px-4 py-2.5 text-gray-700 text-sm hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                    className="block px-4 py-2.5 text-gray-700 text-sm transition-colors"
                   >
                     {dest.label}
                   </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
 
           {/* DESKTOP BOOK BUTTON */}
           <div className="hidden lg:flex items-center">
-            <Link href="/book" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+            <Link href="/book" className="font-bold py-2 px-4 rounded-lg transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
               BOOK ADVENTURE
             </Link>
           </div>
@@ -156,8 +156,8 @@ export default function Navbar() {
 
               {/* Mobile Book Button */}
               <div className="pt-3 border-t border-white/10">
-                <Link href="/book" className="block rounded-lg bg-orange-500 px-4 py-3 text-base font-semibold text-white hover:bg-orange-600 transition-colors">
-                  BOOK ADVENTURE                  
+                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-semibold transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
+                  BOOK ADVENTURE
                 </Link>
               </div>
             </div>

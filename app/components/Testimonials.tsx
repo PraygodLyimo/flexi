@@ -2,6 +2,7 @@
 
 import { Star, Quote } from 'lucide-react';
 import Link from 'next/link';
+import { Marquee, MarqueeContent, MarqueeItem } from '@/components/ui/marquee';
 
 export default function Testimonials() {
   const testimonials = [
@@ -56,14 +57,14 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20">
+      <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-orange-500 fill-orange-500" />
+                <Star key={i} className="h-6 w-6" style={{ color: '#c89b5e', fill: '#c89b5e' }} />
               ))}
             </div>
           </div>
@@ -78,42 +79,44 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow"
-            >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex space-x-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-orange-500 fill-orange-500"
-                    />
-                  ))}
-                </div>
-                <Quote className="h-5 w-5 text-orange-200" />
-              </div>
+        {/* Testimonials Marquee */}
+        <Marquee pauseOnHover speed={30} className="mb-8">
+          <MarqueeContent>
+            {testimonials.map((testimonial) => (
+              <MarqueeItem key={testimonial.id} className="w-[400px]">
+                <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow h-full">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex space-x-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-5 w-5"
+                          style={{ color: '#c89b5e', fill: '#c89b5e' }}
+                        />
+                      ))}
+                    </div>
+                    <Quote className="h-5 w-5" style={{ color: '#f7e6cc' }} />
+                  </div>
 
-              {/* Quote */}
-              <p className="text-gray-700 mb-6 italic leading-relaxed">
-                "{testimonial.text}"
-              </p>
+                  {/* Quote */}
+                  <p className="text-gray-700 mb-6 italic leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
 
-              {/* Author */}
-              <div className="flex items-center">
-                <div className="text-3xl mr-4">{testimonial.image}</div>
-                <div>
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
-                  <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                  {/* Author */}
+                  <div className="flex items-center">
+                    <div className="text-3xl mr-4">{testimonial.image}</div>
+                    <div>
+                      <p className="font-bold text-gray-900">{testimonial.name}</p>
+                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </MarqueeItem>
+            ))}
+          </MarqueeContent>
+        </Marquee>
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
@@ -121,7 +124,7 @@ export default function Testimonials() {
             Ready to become one of our success stories?
           </p>
           <Link href="/tours">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg">
+            <button className="font-bold py-4 px-8 rounded-lg transition-colors text-lg" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
               Start Your Adventure Now
             </button>
           </Link>

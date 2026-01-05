@@ -87,9 +87,9 @@ export default function AboutUs() {
 
       {/* Introduction Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Flexi Safaris is a Tanzania-based safari and adventure travel operator dedicated to creating unforgettable 
+            Flexi Safaris is a Tanzania-based safari and adventure travel operator dedicated to creating unforgettable
             experiences across East Africa&apos;s most spectacular landscapes. With deep local expertise and a passion for wildlife and culture,
             we craft tailored safari tours, nature expeditions, and cultural journeys that exceed expectations.
           </p>
@@ -102,7 +102,7 @@ export default function AboutUs() {
 
       {/* Mission Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             To provide exceptional safari and adventure experiences that honor the natural world,
@@ -113,7 +113,7 @@ export default function AboutUs() {
 
       {/* Why Travel Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-10">Why Travel with Flexi Safaris</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {whyTravelItems.map((item, index) => (
@@ -130,7 +130,7 @@ export default function AboutUs() {
 
       {/* Signature Experiences Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-10">Our Signature Experiences</h2>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {experiences.map((exp, index) => (
@@ -150,7 +150,7 @@ export default function AboutUs() {
             ))}
           </div>
           <p className="text-gray-700 leading-relaxed italic">
-            Every itinerary is designed to maximize wildlife viewing, cultural immersion, and comfortable, 
+            Every itinerary is designed to maximize wildlife viewing, cultural immersion, and comfortable,
             safe travel throughout Tanzania&apos;s diverse ecosystems.
           </p>
         </div>
@@ -203,12 +203,12 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-linear-to-r from-orange-500 to-orange-600">
+      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#947846] mb-4">
             Ready for Your Adventure?
           </h2>
-          <p className="text-orange-100 mb-8 text-lg">
+          <p className="text-[#947846] mb-8 text-lg">
             Let&apos;s plan your unforgettable Tanzanian safari experience.
           </p>
           <button className="bg-white text-orange-600 font-semibold px-8 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-lg">

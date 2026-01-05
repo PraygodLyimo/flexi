@@ -22,14 +22,14 @@ export default function AdventureHero() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center">
-        <h1 className="mb-6 tracking-tight text-white sm:text-6xl md:text-7xl lg:text-9xl" style={{ fontFamily: 'Niconne, serif' }}>
+        <p className="mb-6 tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl" style={{ fontFamily: 'Betterlette, serif' }}>
           Find Your Next Adventure
-        </h1>
-        
+        </p>
+
         <p className="mb-8 max-w-2xl text-base text-white/90 sm:text-lg md:text-xl">
           Curated nature-inspired journeys for the modern explorer.
         </p>
-        
+
       </div>
 
       {/* Optional: Scroll indicator */}

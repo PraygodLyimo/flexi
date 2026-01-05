@@ -30,10 +30,9 @@ export default function GalleryPage() {
 
   return (
     <>
-      <Navbar />
       <div className="min-h-screen bg-white pt-24">
         {/* Page Header */}
-        <section className="bg-linear-to-r from-gray-900 to-gray-800 text-white py-16">
+        <section className="text-[#947846] py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-5xl font-bold mb-4">Gallery</h1>
             <p className="text-xl text-gray-300">
@@ -51,11 +50,10 @@ export default function GalleryPage() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all capitalize ${
-                    selectedCategory === cat
-                      ? 'bg-orange-500 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                  className={`px-6 py-2 rounded-full font-semibold transition-all capitalize ${selectedCategory === cat
+                    ? 'bg-orange-500 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -125,7 +123,6 @@ export default function GalleryPage() {
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }
