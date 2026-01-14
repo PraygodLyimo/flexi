@@ -1,4 +1,33 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+
 export default function AboutUs() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    initial: { opacity: 0 },
+    whileInView: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    },
+    viewport: { once: true }
+  };
+
+  const staggerItem = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
   const whyTravelItems = [
     {
       title: "Local Knowledge & Experience",
@@ -78,15 +107,27 @@ export default function AboutUs() {
     <div className="min-h-screen bg-linear-to-b from-white to-gray-50">
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 pt-24 sm:pt-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            About Flexi Safaris
+        <motion.div
+          className="max-w-4xl mx-auto text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 flex flex-wrap justify-center items-center gap-3">
+            About
+            <ContainerTextFlip
+              words={["Flexi Safaris", "Tanzania", "Your Adventure", "The Wild"]}
+              className="text-[#947846]"
+            />
           </h1>
-        </div>
+        </motion.div>
       </section>
 
       {/* Introduction Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <motion.section
+        className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
+        {...fadeInUp}
+      >
         <div className="max-w-6xl mx-auto">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             Flexi Safaris is a Tanzania-based safari and adventure travel operator dedicated to creating unforgettable
@@ -98,10 +139,13 @@ export default function AboutUs() {
             every traveler enjoys the beauty of Africa safely, responsibly, and memorably.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Mission Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
+      <motion.section
+        className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white"
+        {...fadeInUp}
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -109,72 +153,107 @@ export default function AboutUs() {
             support local communities, and deliver personalized journeys that feel both enriching and effortless.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Why Travel Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">Why Travel with Flexi Safaris</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <motion.h2 className="text-3xl font-bold text-gray-900 mb-10" {...fadeInUp}>Why Travel with Flexi Safaris</motion.h2>
+          <motion.div
+            className="grid md:grid-cols-2 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
             {whyTravelItems.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-default"
+                variants={staggerItem}
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              >
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Signature Experiences Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">Our Signature Experiences</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <motion.h2 className="text-3xl font-bold text-gray-900 mb-10" {...fadeInUp}>Our Signature Experiences</motion.h2>
+          <motion.div
+            className="grid md:grid-cols-3 gap-8 mb-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <motion.div
+                key={index}
+                className="bg-gray-50 p-6 rounded-lg border border-gray-200"
+                variants={staggerItem}
+              >
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   {exp.category}
                 </h3>
                 <ul className="space-y-3">
                   {exp.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
-                      <span className="text-orange-500 font-bold mr-3">•</span>
+                      <span className="font-bold mr-3" style={{ color: '#947846' }}>•</span>
                       <span className="text-gray-700">{item}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <p className="text-gray-700 leading-relaxed italic">
+          </motion.div>
+          <motion.p className="text-gray-700 leading-relaxed italic" {...fadeInUp}>
             Every itinerary is designed to maximize wildlife viewing, cultural immersion, and comfortable,
             safe travel throughout Tanzania&apos;s diverse ecosystems.
-          </p>
+          </motion.p>
         </div>
       </section>
 
       {/* Values Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">Our Values</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <motion.h2 className="text-3xl font-bold text-gray-900 mb-10" {...fadeInUp}>Our Values</motion.h2>
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
             {values.map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                variants={staggerItem}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              >
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {value.title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{value.description}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Commitment Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
+      <motion.section
+        className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white"
+        {...fadeInUp}
+      >
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Commitment to Quality</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -183,16 +262,19 @@ export default function AboutUs() {
           <ul className="space-y-4">
             {commitments.map((item, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-orange-500 font-bold mr-4">▸</span>
+                <span className="font-bold mr-4" style={{ color: '#947846' }}>▸</span>
                 <span className="text-gray-700">{item}</span>
               </li>
             ))}
           </ul>
         </div>
-      </section>
+      </motion.section>
 
       {/* Who We Serve Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <motion.section
+        className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
+        {...fadeInUp}
+      >
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Who We Serve</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -200,10 +282,13 @@ export default function AboutUs() {
             and groups all looking for tailored safari journeys through Tanzania&apos;s iconic landscapes and wildlife havens.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <motion.section
+        className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+        {...fadeInUp}
+      >
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#947846] mb-4">
             Ready for Your Adventure?
@@ -211,11 +296,19 @@ export default function AboutUs() {
           <p className="text-[#947846] mb-8 text-lg">
             Let&apos;s plan your unforgettable Tanzanian safari experience.
           </p>
-          <button className="bg-white text-orange-600 font-semibold px-8 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-lg">
-            Book Your Safari
-          </button>
+          <motion.button
+            className="font-semibold px-8 py-3 rounded-lg transition-colors shadow-lg relative overflow-hidden group"
+            style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(148, 120, 70, 0.3)" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <motion.span
+              className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
+            />
+            <span className="relative z-10">Book Your Safari</span>
+          </motion.button>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

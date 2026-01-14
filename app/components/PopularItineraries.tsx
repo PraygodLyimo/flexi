@@ -2,8 +2,33 @@
 
 import { Star, MapPin, Calendar, Users, DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function PopularItineraries() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    initial: { opacity: 0 },
+    whileInView: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    },
+    viewport: { once: true }
+  };
+
+  const staggerItem = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   const itineraries = [
     {
       id: 1,
@@ -57,24 +82,36 @@ export default function PopularItineraries() {
 
   return (
     <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          {...fadeInUp}
+        >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Popular Safari Packages
           </h2>
           <p className="text-xl text-gray-600">
             Carefully curated itineraries designed for unforgettable experiences
           </p>
-        </div>
+        </motion.div>
 
         {/* Itineraries Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+        >
           {itineraries.map((itinerary) => (
-            <div
+            <motion.div
               key={itinerary.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform"
+              variants={staggerItem}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
+
               {/* Image Placeholder */}
               <div className={`h-48 ${itinerary.image} relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all" />
@@ -131,23 +168,40 @@ export default function PopularItineraries() {
                       </p>
                     </div>
                   </div>
-                  <button className="w-full font-bold py-3 px-4 rounded-lg transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
-                    View Details
-                  </button>
+                  <motion.button
+                    className="w-full font-bold py-3 px-4 rounded-lg transition-colors relative overflow-hidden group shadow-md"
+                    style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+                    whileHover={{ scale: 1.05, boxShadow: '0 10px 15px -3px rgba(148, 120, 70, 0.3)' }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <motion.span
+                      className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
+                    />
+                    <span className="relative z-10">View Details</span>
+                  </motion.button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        <motion.div
+          className="text-center mt-12"
+          {...fadeInUp}
+        >
           <Link href="/tours">
-            <button className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg">
+            <motion.button
+              className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               View All Customizable Trips →
-            </button>
+            </motion.button>
           </Link>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );

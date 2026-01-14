@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X, Mountain, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -82,8 +83,15 @@ export default function Navbar() {
 
           {/* DESKTOP BOOK BUTTON */}
           <div className="hidden lg:flex items-center">
-            <Link href="/book" className="font-bold py-2 px-4 rounded-lg transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
-              BOOK ADVENTURE
+            <Link href="/book">
+              <motion.button
+                className="font-bold py-2 px-4 rounded-lg transition-colors shadow-md"
+                style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 10px 15px -3px rgba(148, 120, 70, 0.3)' }}
+                whileTap={{ scale: 0.95 }}
+              >
+                BOOK ADVENTURE
+              </motion.button>
             </Link>
           </div>
 

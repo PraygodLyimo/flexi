@@ -22,7 +22,7 @@ export default function AdventureHero() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center">
-        <p className="mb-6 tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl" style={{ fontFamily: 'Betterlette, serif' }}>
+        <p className="mb-6 tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl" style={{ fontFamily: 'Betterlett, serif' }}>
           Find Your Next Adventure
         </p>
 

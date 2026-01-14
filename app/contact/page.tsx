@@ -1,11 +1,34 @@
 'use client';
 
-import Navbar from "@/app/pages/nav/page";
-import Footer from "@/app/components/Footer";
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function ContactPage() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    initial: { opacity: 0 },
+    whileInView: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    },
+    viewport: { once: true }
+  };
+
+  const staggerItem = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,55 +52,65 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar />
       <div className="min-h-screen bg-white pt-24">
         {/* Page Header */}
-        <section className="bg-linear-to-r from-gray-900 to-gray-800 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="text-[#947846] py-16">
+          <motion.div
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-xl text-gray-300">
               Get in touch with our safari experts
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* Contact Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+            <motion.div
+              className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+            >
               {/* Contact Info Cards */}
-              <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-xl p-8 border-2 border-orange-200">
-                <MapPin className="h-12 w-12 text-orange-600 mb-4" />
+              <motion.div className="rounded-xl p-8 border-2 border-[#f8ecdc]" variants={staggerItem}>
+                <MapPin className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Location</h3>
                 <p className="text-gray-700">
-                  Arusha, Tanzania<br/>
+                  Arusha, Tanzania<br />
                   East Africa
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-xl p-8 border-2 border-orange-200">
-                <Phone className="h-12 w-12 text-orange-600 mb-4" />
+              <motion.div className="rounded-xl p-8 border-2 border-[#f8ecdc]" variants={staggerItem}>
+                <Phone className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Phone</h3>
                 <p className="text-gray-700">
-                  +255 (XXX) XXX-XXXX<br/>
+                  +255 (XXX) XXX-XXXX<br />
                   Available 24/7
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-xl p-8 border-2 border-orange-200">
-                <Mail className="h-12 w-12 text-orange-600 mb-4" />
+              <motion.div className="rounded-xl p-8 border-2 border-[#f8ecdc]" variants={staggerItem}>
+                <Mail className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Email</h3>
                 <p className="text-gray-700">
-                  info@flexisafaris.com<br/>
+                  info@flexisafaris.com<br />
                   We reply within 24 hours
                 </p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Contact Form */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Form */}
-              <div>
+              <motion.div {...fadeInUp}>
                 <h2 className="text-4xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -90,7 +123,7 @@ export default function ContactPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#947846]"
                         placeholder="John Doe"
                       />
                     </div>
@@ -103,7 +136,7 @@ export default function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#947846]"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -118,7 +151,7 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#947846]"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -132,7 +165,7 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#947846]"
                       placeholder="Safari inquiry"
                     />
                   </div>
@@ -146,20 +179,28 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#947846]"
                       placeholder="Tell us about your safari dreams..."
                     />
                   </div>
 
-                  <button
+                  <motion.button
                     type="submit"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                    className="w-full font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-lg relative overflow-hidden group"
+                    style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+                    whileHover={{ scale: 1.02, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <Send className="h-5 w-5" />
-                    <span>Send Message</span>
-                  </button>
+                    <motion.span
+                      className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
+                    />
+                    <div className="flex items-center space-x-2 relative z-10">
+                      <Send className="h-5 w-5" />
+                      <span>Send Message</span>
+                    </div>
+                  </motion.button>
                 </form>
-              </div>
+              </motion.div>
 
               {/* FAQ Section */}
               <div>
@@ -212,7 +253,6 @@ export default function ContactPage() {
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }

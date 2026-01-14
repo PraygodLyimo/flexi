@@ -1,10 +1,33 @@
 'use client';
 
-import Navbar from "@/app/pages/nav/page";
-import Footer from "@/app/components/Footer";
 import { MapPin, Mountain, Users, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function DestinationsPage() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    initial: { opacity: 0 },
+    whileInView: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    },
+    viewport: { once: true }
+  };
+
+  const staggerItem = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   const destinations = [
     {
       id: 1,
@@ -82,27 +105,40 @@ export default function DestinationsPage() {
 
   return (
     <>
-      <Navbar />
       <div className="min-h-screen bg-white pt-24">
         {/* Page Header */}
         <section className="bg-linear-to-br from-gray-900 to-gray-800 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="text-5xl font-bold mb-4">Explore Our Destinations</h1>
             <p className="text-xl text-gray-300">
               Discover Tanzania's most iconic safari and adventure locations
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* Destinations */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+            >
               {destinations.map((destination) => (
-                <div
+                <motion.div
                   key={destination.id}
-                  className={`bg-linear-to-br ${destination.color} rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 text-white`}
+                  className={`bg-linear-to-br ${destination.color} rounded-xl overflow-hidden shadow-lg transition-all duration-300 text-white`}
+                  variants={staggerItem}
+                  whileHover={{ y: -5, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}
                 >
+
                   {/* Top Section */}
                   <div className="p-8">
                     <div className="text-6xl mb-4">{destination.icon}</div>
@@ -145,7 +181,7 @@ export default function DestinationsPage() {
                       <ul className="space-y-2">
                         {destination.activities.map((activity, idx) => (
                           <li key={idx} className="flex items-center text-white">
-                            <span className="text-orange-300 mr-2">✓</span>
+                            <span className="mr-2" style={{ color: '#947846' }}>✓</span>
                             {activity}
                           </li>
                         ))}
@@ -153,18 +189,20 @@ export default function DestinationsPage() {
                     </div>
                   </div>
 
-                  {/* CTA */}
-                  <div className="bg-black/20 px-8 py-4 flex justify-between items-center hover:bg-black/40 transition-colors cursor-pointer">
+                  <motion.div
+                    className="bg-black/20 px-8 py-4 flex justify-between items-center transition-colors cursor-pointer"
+                    whileHover={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+                  >
                     <span className="font-semibold">Plan Your Trip</span>
                     <span className="text-lg">→</span>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
+
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }

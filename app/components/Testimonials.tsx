@@ -3,8 +3,16 @@
 import { Star, Quote } from 'lucide-react';
 import Link from 'next/link';
 import { Marquee, MarqueeContent, MarqueeItem } from '@/components/ui/marquee';
+import { motion } from 'framer-motion';
 
 export default function Testimonials() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
   const testimonials = [
     {
       id: 1,
@@ -57,10 +65,13 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20">
-      <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          {...fadeInUp}
+        >
           <div className="flex justify-center mb-4">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
@@ -77,7 +88,7 @@ export default function Testimonials() {
           <p className="text-gray-500 mt-4">
             4.8/5 Based on 3,700+ verified reviews
           </p>
-        </div>
+        </motion.div>
 
         {/* Testimonials Marquee */}
         <Marquee pauseOnHover speed={30} className="mb-8">
@@ -119,16 +130,28 @@ export default function Testimonials() {
         </Marquee>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
+        <motion.div
+          className="mt-16 text-center"
+          {...fadeInUp}
+        >
           <p className="text-xl text-gray-600 mb-6">
             Ready to become one of our success stories?
           </p>
           <Link href="/tours">
-            <button className="font-bold py-4 px-8 rounded-lg transition-colors text-lg" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
-              Start Your Adventure Now
-            </button>
+            <motion.button
+              className="font-bold py-4 px-8 rounded-lg transition-colors text-lg shadow-lg relative overflow-hidden group"
+              style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.span
+                className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
+              />
+              <span className="relative z-10">Start Your Adventure Now</span>
+            </motion.button>
           </Link>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function PopularPackages() {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,9 +73,17 @@ export default function PopularPackages() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
                 {/* Explore Button - appears on hover */}
-                <button className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full px-6 py-3 font-semibold opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
-                  Explore Package
-                </button>
+                <motion.button
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full px-6 py-3 font-semibold opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 relative overflow-hidden group/btn"
+                  style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <motion.span
+                    className="absolute inset-0 bg-white/20 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 skew-x-12"
+                  />
+                  <span className="relative z-10">Explore Package</span>
+                </motion.button>
               </div>
 
               {/* Card Content */}
@@ -103,10 +112,17 @@ export default function PopularPackages() {
           className={`mt-12 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
-          <button className="group relative overflow-hidden rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
+          <motion.button
+            className="group relative overflow-hidden rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:shadow-xl shadow-lg"
+            style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <motion.span
+              className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
+            />
             <span className="relative z-10">View All Packages</span>
-            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: 'linear-gradient(to right, #c89b5e, #947846)' }}></div>
-          </button>
+          </motion.button>
         </div>
       </div>
     </section>

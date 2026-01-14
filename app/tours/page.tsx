@@ -1,10 +1,39 @@
 'use client';
 
-import Navbar from "@/app/pages/nav/page";
-import Footer from "@/app/components/Footer";
-import { Star, MapPin, DollarSign, Calendar, Users } from 'lucide-react';
+import { Star, MapPin, DollarSign, Calendar, Users, ChevronDown, ChevronUp, Check } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 export default function ToursPage() {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const toggleExpand = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    initial: { opacity: 0 },
+    whileInView: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    },
+    viewport: { once: true }
+  };
+
+  const staggerItem = {
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+  };
+
   const tours = [
     {
       id: 1,
@@ -116,142 +145,252 @@ export default function ToursPage() {
 
   return (
     <>
-      <Navbar />
-      <div className="min-h-screen bg-white pt-24">
-        {/* Page Header */}
-        <section className="text-[#947846] py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-5xl font-bold mb-4" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>Our Safari Tours</h1>
-            <p className="text-xl text-[#947246]" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>
-              Carefully curated itineraries for unforgettable African experiences
-            </p>
-          </div>
-        </section>
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 overflow-hidden">
+        {/* Cinematic Background Image */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
+          style={{ backgroundImage: "url('/safari-hero.png')" }}
+        >
+          {/* Enhanced Overlay for readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        <motion.div
+          className="absolute inset-0 z-[1] opacity-20 bg-[url('/safari-pattern.png')] bg-repeat"
+          animate={{
+            backgroundPosition: ["0% 0%", "100% 100%"],
+          }}
+          transition={{
+            duration: 60,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        ></motion.div>
 
-        {/* Tours */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {tours.map((tour, index) => (
-              <div
-                key={tour.id}
-                className="mb-16 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                  {/* Left - Content */}
-                  <div className="lg:col-span-2 p-8 lg:p-12 text-[#947846]">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>{tour.title}</h2>
-                    <p className="text-xl text-gray-600 mb-6" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>{tour.description}</p>
-                    <p className="text-gray-700 mb-8 leading-relaxed" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>{tour.fullDescription}</p>
+        {/* Subtle floating shapes for background interest */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#c89b5e]/20 rounded-full blur-3xl z-[1]"
+          animate={{
+            x: [0, 50, 0],
+            y: [0, 30, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#475235]/10 rounded-full blur-3xl z-[1]"
+          animate={{
+            x: [0, -40, 0],
+            y: [0, -60, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
 
-                    {/* Quick Info */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="h-5 w-5" style={{ color: '#c89b5e' }} />
-                        <div>
-                          <p className="text-xs text-gray-600">Duration</p>
-                          <p className="font-bold text-gray-900">{tour.duration}</p>
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <motion.h1
+            className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            style={{ fontFamily: 'Betterlett, cursive' }}
+          >
+            Our Safari Tours
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl text-gray-100 max-w-2xl mx-auto font-medium drop-shadow-lg leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            style={{ fontFamily: 'Myriad Pro, sans-serif' }}
+          >
+            Experience the raw beauty of Tanzania's wilderness with our meticulously crafted luxury safari tours.
+          </motion.p>
+          <motion.div
+            className="mt-8 h-1 w-24 bg-[#c89b5e] mx-auto rounded-full shadow-lg"
+            initial={{ width: 0 }}
+            animate={{ width: 96 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          ></motion.div>
+        </div>
+      </section>
+
+      {/* Main Content with subtle background */}
+      <div className="relative min-h-screen bg-[#faf7f2]">
+        {/* Simple subtle pattern or solid color */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/safari-pattern.png')] bg-repeat bg-[length:200px_200px]"></div>
+
+        {/* Tours Section */}
+        <section className="py-20 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+            >
+              {tours.map((tour) => (
+                <motion.div
+                  key={tour.id}
+                  className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden flex flex-col h-fit"
+                  variants={staggerItem}
+                  whileHover={{ y: -5, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)' }}
+                >
+                  {/* Card Content - Summary View */}
+                  <div className="p-8">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="max-w-[70%]">
+                        <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-2" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>
+                          {tour.title}
+                        </h2>
+                        <div className="flex items-center text-sm text-[#947846] font-semibold">
+                          <MapPin className="h-3 w-3 mr-1" />
+                          {tour.destinations}
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Users className="h-5 w-5" style={{ color: '#c89b5e' }} />
-                        <div>
-                          <p className="text-xs text-gray-600">Group Size</p>
-                          <p className="font-bold text-gray-900">{tour.groupSize}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <MapPin className="h-5 w-5" style={{ color: '#c89b5e' }} />
-                        <div>
-                          <p className="text-xs text-gray-600">Destinations</p>
-                          <p className="font-bold text-gray-900">{tour.destinations}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Star className="h-5 w-5" style={{ color: '#c89b5e' }} />
-                        <div>
-                          <p className="text-xs text-gray-600">Rating</p>
-                          <p className="font-bold text-gray-900">{tour.rating} ({tour.reviews})</p>
-                        </div>
+                      <div className="text-right">
+                        <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">FROM</p>
+                        <p className="text-3xl font-bold text-[#947846]">${tour.price.toLocaleString()}</p>
                       </div>
                     </div>
 
-                    {/* Highlights */}
-                    <div className="mb-8">
-                      <h3 className="font-bold text-gray-900 mb-3">Highlights</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {tour.highlights.map((highlight, idx) => (
-                          <span key={idx} className="text-sm font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: '#f7e6cc', color: '#947846' }}>
-                            {highlight}
-                          </span>
-                        ))}
+                    <p className="text-gray-600 mb-8 line-clamp-2 text-sm leading-relaxed" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>
+                      {tour.description}
+                    </p>
+
+                    <div className="flex items-center space-x-6 mb-8">
+                      <div className="flex items-center space-x-2">
+                        <div className="p-2 rounded-lg bg-[#fdf8f0]">
+                          <Calendar className="h-4 w-4 text-[#c89b5e]" />
+                        </div>
+                        <span className="text-sm font-bold text-gray-700">{tour.duration}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="p-2 rounded-lg bg-[#fdf8f0]">
+                          <Users className="h-4 w-4 text-[#c89b5e]" />
+                        </div>
+                        <span className="text-sm font-bold text-gray-700">{tour.groupSize}</span>
                       </div>
                     </div>
 
-                    {/* What's Included */}
-                    <div className="mb-8">
-                      <h3 className="font-bold text-gray-900 mb-3">What's Included</h3>
-                      <div className="grid grid-cols-2 gap-3">
-                        {tour.included.map((item, idx) => (
-                          <div key={idx} className="flex items-center text-gray-700">
-                            <span className="mr-2" style={{ color: '#c89b5e' }}>✓</span>
-                            {item}
+                    <div className="flex space-x-4">
+                      <motion.button
+                        className="flex-[2] py-4 px-6 rounded-2xl font-bold text-sm bg-[#947846] text-white shadow-lg shadow-[#947846]/20 relative overflow-hidden group"
+                        whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <motion.span
+                          className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-12"
+                        />
+                        <span className="relative z-10">Book This package</span>
+                      </motion.button>
+                      <motion.button
+                        className="flex-1 py-4 px-4 rounded-2xl font-bold text-sm border-2 border-[#947846] text-[#947846] flex items-center justify-center space-x-2 relative overflow-hidden group transition-colors duration-300"
+                        whileHover={{
+                          scale: 1.05,
+                          backgroundColor: '#947846',
+                          color: '#ffffff',
+                          boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)'
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => toggleExpand(tour.id)}
+                      >
+                        <motion.span
+                          className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-12"
+                        />
+                        <span className="relative z-10">{expandedId === tour.id ? 'Hide' : 'Details'}</span>
+                        {expandedId === tour.id ? <ChevronUp className="h-4 w-4 relative z-10" /> : <ChevronDown className="h-4 w-4 relative z-10" />}
+                      </motion.button>
+                    </div>
+                  </div>
+
+                  {/* Expandable Details - ALL PACKAGE INFORMATION HERE */}
+                  <AnimatePresence>
+                    {expandedId === tour.id && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
+                        className="border-t border-gray-50 bg-[#fafafa]/80"
+                      >
+                        <div className="p-8 space-y-10">
+                          {/* Full Experience */}
+                          <div>
+                            <div className="flex items-center space-x-2 mb-4">
+                              <span className="h-1 w-8 bg-[#c89b5e] rounded-full"></span>
+                              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">Full Experience</h3>
+                            </div>
+                            <p className="text-sm text-gray-600 leading-relaxed font-medium">{tour.fullDescription}</p>
                           </div>
-                        ))}
-                      </div>
-                    </div>
 
-                    {/* Itinerary */}
-                    <div className="border-t pt-8">
-                      <h3 className="font-bold text-gray-900 mb-6 text-2xl">Detailed Itinerary</h3>
-                      <div className="space-y-4">
-                        {tour.itinerary.map((item, idx) => (
-                          <div key={idx} className="flex space-x-4">
-                            <div className="shrink-0">
-                              <div className="flex items-center justify-center h-10 w-10 rounded-full text-white font-bold" style={{ backgroundColor: '#c89b5e' }}>
-                                {item.day}
+                          {/* Highlights & Included */}
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Highlights</h3>
+                              <div className="space-y-2">
+                                {tour.highlights.map((h, i) => (
+                                  <div key={i} className="flex items-center text-sm text-gray-700 font-medium">
+                                    <Star className="h-3 w-3 text-[#c89b5e] mr-2 fill-[#c89b5e]" />
+                                    {h}
+                                  </div>
+                                ))}
                               </div>
                             </div>
                             <div>
-                              <h4 className="font-bold text-gray-900">{item.title}</h4>
-                              <p className="text-gray-600">{item.desc}</p>
+                              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">What's Included</h3>
+                              <div className="space-y-2">
+                                {tour.included.map((item, i) => (
+                                  <div key={i} className="flex items-center text-sm text-gray-700 font-medium">
+                                    <Check className="h-3 w-3 text-green-500 mr-2" />
+                                    {item}
+                                  </div>
+                                ))}
+                              </div>
                             </div>
                           </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Right - Booking Card */}
-                  <div className="bg-gray-50 p-8 lg:p-12 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-gray-600 text-sm font-semibold mb-2">PRICE FROM</h3>
-                      <p className="text-4xl font-bold text-gray-900 mb-2">
-                        ${tour.price.toLocaleString()}
-                      </p>
-                      <p className="text-gray-600 text-sm mb-8">Per person (shared accommodation)</p>
+                          {/* Detailed Itinerary */}
+                          <div>
+                            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Detailed Daily Itinerary</h3>
+                            <div className="space-y-6 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gray-100">
+                              {tour.itinerary.map((day, idx) => (
+                                <div key={idx} className="relative pl-12">
+                                  <div className="absolute left-0 top-1 h-[40px] w-[40px] rounded-full bg-white border-2 border-[#c89b5e] flex items-center justify-center z-10">
+                                    <span className="text-[10px] font-bold text-[#c89b5e]">D{day.day}</span>
+                                  </div>
+                                  <div>
+                                    <h4 className="text-sm font-bold text-gray-900 mb-1">{day.title}</h4>
+                                    <p className="text-xs text-gray-500 leading-relaxed font-medium">{day.desc}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
 
-                      <div className="space-y-4">
-                        <button className="w-full font-bold py-3 px-4 rounded-lg transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
-                          Book This Tour
-                        </button>
-                        <button className="w-full border-2 font-bold py-3 px-4 rounded-lg transition-colors" style={{ borderColor: '#947846', color: '#ffffffff' }}>
-                          Customize Itinerary
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="mt-8 pt-8 border-t border-gray-200">
-                      <p className="text-gray-700 text-sm mb-4">
-                        Have questions? Our experts are ready to help!
-                      </p>
-                      <a href="mailto:info@flexisafaris.com" className="font-bold" style={{ color: '#947846' }}>
-                        info@flexisafaris.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+                          <div className="pt-6 border-t border-gray-100 flex justify-between items-center text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                            <span className="flex items-center">
+                              <DollarSign className="h-3 w-3 mr-1" />
+                              All Inclusive Pricing
+                            </span>
+                            <span className="flex items-center">
+                              <Users className="h-3 w-3 mr-1" />
+                              Small Group Guarantee
+                            </span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </section>
       </div>

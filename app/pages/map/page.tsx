@@ -40,7 +40,9 @@ export default function MapPage() {
             if (cancelled) return;
 
             // Initialize map focused on Serengeti
-            mapRef.current = L.map(mapContainer.current!).setView([-2.3333, 34.8333], 10);
+            mapRef.current = L.map(mapContainer.current!, {
+                scrollWheelZoom: false,
+            }).setView([-2.3333, 34.8333], 10);
 
             // Restrict the map to a focused bounding box
             const focusedBounds = [[-4.0, 33.0], [-1.0, 36.5]] as any;

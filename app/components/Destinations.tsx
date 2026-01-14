@@ -3,8 +3,33 @@
 import { MapPin, Mountain, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { Marquee, MarqueeContent, MarqueeItem } from '@/components/ui/marquee';
+import { motion } from 'framer-motion';
 
 export default function Destinations() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    initial: { opacity: 0 },
+    whileInView: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    },
+    viewport: { once: true }
+  };
+
+  const staggerItem = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
   const destinations = [
     {
       id: 1,
@@ -58,16 +83,19 @@ export default function Destinations() {
 
   return (
     <section className="py-20">
-      <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          {...fadeInUp}
+        >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Explore Our Destinations
           </h2>
           <p className="text-xl text-gray-600">
             Tanzania's most iconic safari and adventure locations
           </p>
-        </div>
+        </motion.div>
 
         {/* Destinations Marquee */}
         <Marquee pauseOnHover speed={25} className="mb-8">
@@ -110,37 +138,47 @@ export default function Destinations() {
         </Marquee>
 
         {/* Additional Info */}
-        <div className="mt-16 bg-linear-to-r from-orange-50 to-amber-50 rounded-xl p-8 md:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex space-x-4">
-              <MapPin className="h-8 w-8 text-orange-600 shrink-0" />
+        <motion.div
+          className="mt-16 rounded-xl p-8 md:p-12"
+          style={{ background: 'linear-gradient(to right, #f8ecdc, #f7e6cc)' }}
+          {...fadeInUp}
+        >
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            <motion.div className="flex space-x-4" variants={staggerItem}>
+              <MapPin className="h-8 w-8 shrink-0" style={{ color: '#947846' }} />
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">6 Major Destinations</h4>
                 <p className="text-gray-600">
                   Carefully selected locations for optimal wildlife viewing and experiences
                 </p>
               </div>
-            </div>
-            <div className="flex space-x-4">
-              <Mountain className="h-8 w-8 text-orange-600 shrink-0" />
+            </motion.div>
+            <motion.div className="flex space-x-4" variants={staggerItem}>
+              <Mountain className="h-8 w-8 shrink-0" style={{ color: '#947846' }} />
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Diverse Terrain</h4>
                 <p className="text-gray-600">
                   From crater rims to river valleys, mountains to beaches
                 </p>
               </div>
-            </div>
-            <div className="flex space-x-4">
-              <Users className="h-8 w-8 text-orange-600 shrink-0" />
+            </motion.div>
+            <motion.div className="flex space-x-4" variants={staggerItem}>
+              <Users className="h-8 w-8 shrink-0" style={{ color: '#947846' }} />
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Tailored Experiences</h4>
                 <p className="text-gray-600">
                   Custom itineraries designed for your interests and pace
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
