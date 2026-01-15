@@ -34,8 +34,8 @@ const africanCountries = [
 
 export default function MapPage() {
     return (
-        <div className="w-full h-auto p-8 bg-white flex flex-col items-center">
-            <div className="relative h-[850px] w-full overflow-hidden shadow-inner">
+        <div className="w-full h-auto py-6 px-4 bg-white flex flex-col items-center">
+            <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden shadow-inner">
                 <div className="to-background absolute inset-0 bg-radial from-transparent to-70% pointer-events-none" />
                 <DottedMap
                     markers={markers}
@@ -48,7 +48,7 @@ export default function MapPage() {
                     style={{ width: "100%", height: "100%" }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-                    <TypingAnimation className="text-[#947846] text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center">
+                    <TypingAnimation className="text-[#947846] text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center">
                         Tanzania the Unforgettable
                     </TypingAnimation>
                 </div>

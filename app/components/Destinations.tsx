@@ -4,6 +4,7 @@ import { MapPin, Mountain, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { Marquee, MarqueeContent, MarqueeItem } from '@/components/ui/marquee';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Destinations() {
   const fadeInUp = {
@@ -37,7 +38,7 @@ export default function Destinations() {
       description: 'The Great Migration and endless wildlife',
       highlights: 'Big Five, Great Migration',
       visitors: '100,000+/year',
-      color: 'from-amber-600 to-amber-700',
+      image: '/serengeti.jpg',
     },
     {
       id: 2,
@@ -45,7 +46,7 @@ export default function Destinations() {
       description: 'Africa\'s largest intact crater ecosystem',
       highlights: 'Crater Views, Rhinos',
       visitors: '80,000+/year',
-      color: 'from-green-600 to-green-700',
+      image: '/Ngorongoro.jpg',
     },
     {
       id: 3,
@@ -53,7 +54,7 @@ export default function Destinations() {
       description: 'Elephant herds and ancient baobabs',
       highlights: 'Elephant Herds, Scenic Views',
       visitors: '60,000+/year',
-      color: 'from-yellow-600 to-yellow-700',
+      image: '/Tarangire.jpg',
     },
     {
       id: 4,
@@ -61,7 +62,7 @@ export default function Destinations() {
       description: 'Tree-climbing lions and birdwatching paradise',
       highlights: 'Tree Lions, Flamingos',
       visitors: '40,000+/year',
-      color: 'from-blue-600 to-blue-700',
+      image: '/Manyara.jpg',
     },
     {
       id: 5,
@@ -69,7 +70,7 @@ export default function Destinations() {
       description: 'Africa\'s highest peak and ultimate challenge',
       highlights: 'Summit Trek, 5 Ecological Zones',
       visitors: '45,000+/year',
-      color: 'from-indigo-600 to-indigo-700',
+      image: '/Kilimanjaro.webp',
     },
     {
       id: 6,
@@ -78,6 +79,7 @@ export default function Destinations() {
       highlights: 'Beaches, Stone Town, Spices',
       visitors: '120,000+/year',
       color: 'from-cyan-600 to-cyan-700',
+      image: '/zanzibar.jpg',
     },
   ];
 
@@ -104,33 +106,48 @@ export default function Destinations() {
               <MarqueeItem key={destination.id} className="w-[380px]">
                 <div
                   id={destination.name.toLowerCase()}
-                  className={`bg-linear-to-br ${destination.color} rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-white group cursor-pointer h-full`}
+                  className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-white group cursor-pointer h-full"
                 >
-                  {/* Top Section */}
-                  <div className="p-8">
-                    <div className="text-3xl mb-4">{destination.name}</div>
-                    <p className="text-white/90 mb-6">{destination.description}</p>
-
-                    {/* Highlights */}
-                    <div className="bg-white/20 rounded-lg p-3 mb-4">
-                      <p className="text-xs font-semibold text-white/70 mb-1">HIGHLIGHTS</p>
-                      <p className="text-white font-medium">{destination.highlights}</p>
-                    </div>
-
-                    {/* Visitors */}
-                    <div className="flex items-center text-white/90">
-                      <TrendingUp className="h-4 w-4 mr-2" />
-                      <span className="text-sm">{destination.visitors} visitors</span>
-                    </div>
+                  {/* Background Image */}
+                  <div className="relative h-full min-h-[400px]">
+                    <Image
+                      src={destination.image}
+                      alt={destination.name}
+                      fill
+                      className="object-cover blur-sm"
+                    />
+                    {/* Dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
                   </div>
 
-                  {/* CTA */}
-                  <Link href="/destinations">
-                    <div className="bg-black/20 px-8 py-4 flex justify-between items-center group-hover:bg-black/40 transition-colors">
-                      <span className="font-semibold">Explore</span>
-                      <span className="text-lg">→</span>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 flex flex-col">
+                    {/* Top Section */}
+                    <div className="p-8 flex-1">
+                      <div className="text-3xl mb-4 font-bold">{destination.name}</div>
+                      <p className="text-white/90 mb-6">{destination.description}</p>
+
+                      {/* Highlights */}
+                      <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 mb-4">
+                        <p className="text-xs font-semibold text-white/70 mb-1">HIGHLIGHTS</p>
+                        <p className="text-white font-medium">{destination.highlights}</p>
+                      </div>
+
+                      {/* Visitors */}
+                      <div className="flex items-center text-white/90">
+                        <TrendingUp className="h-4 w-4 mr-2" />
+                        <span className="text-sm">{destination.visitors} visitors</span>
+                      </div>
                     </div>
-                  </Link>
+
+                    {/* CTA */}
+                    <Link href="/destinations">
+                      <div className="bg-black/20 backdrop-blur-sm px-8 py-4 flex justify-between items-center group-hover:bg-black/40 transition-colors">
+                        <span className="font-semibold">Explore</span>
+                        <span className="text-lg">→</span>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </MarqueeItem>
             ))}

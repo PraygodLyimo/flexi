@@ -441,7 +441,7 @@ function Footer() {
                                     style: {
                                         color: '#f7e6cc'
                                     },
-                                    children: "Crafting unforgettable African safari experiences since 2010. Founded by Praygod Lyimo."
+                                    children: "Crafting unforgettable African safari experiences since 2022. Founded by Jackson Robert."
                                 }, void 0, false, {
                                     fileName: "[project]/flexi/app/components/Footer.tsx",
                                     lineNumber: 14,
@@ -758,7 +758,7 @@ function Footer() {
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Sakina, Moshi Road, Arusha, Tanzania"
+                                                    children: "Moshono, Arusha, Tanzania"
                                                 }, void 0, false, {
                                                     fileName: "[project]/flexi/app/components/Footer.tsx",
                                                     lineNumber: 54,
@@ -784,7 +784,7 @@ function Footer() {
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "+255 754 123 456 (WhatsApp Available)"
+                                                    children: "+255 764 570 182 (WhatsApp Available)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/flexi/app/components/Footer.tsx",
                                                     lineNumber: 58,

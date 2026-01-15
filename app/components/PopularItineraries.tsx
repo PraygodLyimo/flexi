@@ -3,6 +3,7 @@
 import { Star, MapPin, Calendar, Users, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function PopularItineraries() {
   const fadeInUp = {
@@ -37,7 +38,7 @@ export default function PopularItineraries() {
       destination: 'Serengeti & Ngorongoro',
       duration: '7 Days',
       price: 1588,
-      image: 'bg-linear-to-br from-amber-600 to-amber-800',
+      image: '/Ngorongoro.jpg',
       highlights: ['Big Five', 'Great Migration', 'Crater Views'],
       rating: 4.9,
       reviews: 342,
@@ -49,7 +50,7 @@ export default function PopularItineraries() {
       destination: 'Serengeti Circuit',
       duration: '9 Days',
       price: 2289,
-      image: 'bg-linear-to-br from-green-700 to-green-900',
+      image: '/serengeti.jpg',
       highlights: ['Migration', 'River Crossing', 'Game Drives'],
       rating: 4.9,
       reviews: 512,
@@ -61,7 +62,7 @@ export default function PopularItineraries() {
       destination: 'Safari + Beach',
       duration: '11 Days',
       price: 2126,
-      image: 'bg-linear-to-br from-blue-600 to-blue-800',
+      image: '/zanzibar.jpg',
       highlights: ['Safari Tour', 'Beach Escape', 'Cultural Tour'],
       rating: 4.8,
       reviews: 428,
@@ -73,7 +74,7 @@ export default function PopularItineraries() {
       destination: 'Ultimate Tanzania',
       duration: '15 Days',
       price: 2934,
-      image: 'bg-linear-to-br from-purple-700 to-purple-900',
+      image: '/zanzibar.jpg',
       highlights: ['Full Safari', 'Extended Beach', 'Luxury Camps'],
       rating: 4.9,
       reviews: 287,
@@ -107,16 +108,22 @@ export default function PopularItineraries() {
           {itineraries.map((itinerary) => (
             <motion.div
               key={itinerary.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform"
+              className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform"
               variants={staggerItem}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
 
-              {/* Image Placeholder */}
-              <div className={`h-48 ${itinerary.image} relative overflow-hidden`}>
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={itinerary.image}
+                  alt={itinerary.title}
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all" />
                 <div className="absolute inset-0 flex items-end p-4">
-                  <span className="text-white font-bold text-2xl">{itinerary.duration}</span>
+                  <span className="text-white font-bold text-2xl relative z-10">{itinerary.duration}</span>
                 </div>
               </div>
 

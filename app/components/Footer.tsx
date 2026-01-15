@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Flexi Safaris</h3>
             <p style={{ color: '#f7e6cc' }}>
-              Crafting unforgettable African safari experiences since 2010. Founded by Praygod Lyimo.
+              Crafting unforgettable African safari experiences since 2022. Founded by Jackson Robert.
             </p>
             <div className="mt-4 flex space-x-4">
               <Facebook className="h-5 w-5 cursor-pointer" style={{ color: '#c89b5e' }} />
@@ -51,11 +51,11 @@ export default function Footer() {
             <div className="space-y-3" style={{ color: '#f7e6cc' }}>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5" style={{ color: '#c89b5e' }} />
-                <span>Sakina, Moshi Road, Arusha, Tanzania</span>
+                <span>Moshono, Arusha, Tanzania</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" style={{ color: '#c89b5e' }} />
-                <span>+255 754 123 456 (WhatsApp Available)</span>
+                <span>+255 764 570 182 (WhatsApp Available)</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5" style={{ color: '#c89b5e' }} />

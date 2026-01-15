@@ -3,6 +3,7 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { BackgroundGradient } from '@/components/ui/background-gradient';
 
 export default function ContactPage() {
   const fadeInUp = {
@@ -62,7 +63,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-700">
               Get in touch with our safari experts
             </p>
           </motion.div>
@@ -79,31 +80,37 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               {/* Contact Info Cards */}
-              <motion.div className="rounded-xl p-8 border-2 border-[#f8ecdc]" variants={staggerItem}>
-                <MapPin className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Location</h3>
-                <p className="text-gray-700">
-                  Arusha, Tanzania<br />
-                  East Africa
-                </p>
+              <motion.div variants={staggerItem}>
+                <BackgroundGradient className="rounded-xl p-8 bg-white">
+                  <MapPin className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Location</h3>
+                  <p className="text-gray-700">
+                    Moshono Arusha, Tanzania<br />
+                    East Africa
+                  </p>
+                </BackgroundGradient>
               </motion.div>
 
-              <motion.div className="rounded-xl p-8 border-2 border-[#f8ecdc]" variants={staggerItem}>
-                <Phone className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Phone</h3>
-                <p className="text-gray-700">
-                  +255 (XXX) XXX-XXXX<br />
-                  Available 24/7
-                </p>
+              <motion.div variants={staggerItem}>
+                <BackgroundGradient className="rounded-xl p-8 bg-white">
+                  <Phone className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Phone</h3>
+                  <p className="text-gray-700">
+                    +255 764 570 182<br />
+                    Available 24/7
+                  </p>
+                </BackgroundGradient>
               </motion.div>
 
-              <motion.div className="rounded-xl p-8 border-2 border-[#f8ecdc]" variants={staggerItem}>
-                <Mail className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Email</h3>
-                <p className="text-gray-700">
-                  info@flexisafaris.com<br />
-                  We reply within 24 hours
-                </p>
+              <motion.div variants={staggerItem}>
+                <BackgroundGradient className="rounded-xl p-8 bg-white">
+                  <Mail className="h-12 w-12 mb-4" style={{ color: '#947846' }} />
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Email</h3>
+                  <p className="text-gray-700">
+                    info@flexisafaris.com<br />
+                    We reply within 24 hours
+                  </p>
+                </BackgroundGradient>
               </motion.div>
             </motion.div>
 

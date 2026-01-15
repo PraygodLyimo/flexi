@@ -1,5 +1,9 @@
 1:"$Sreact.fragment"
-2:I[95277,["/_next/static/chunks/d2b5a9c8c8dd72f0.js","/_next/static/chunks/95a353f0228e9f93.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"buildId":"71TqEoHeF7jAkjfwiurrm","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-screen w-full overflow-hidden","children":[["$","div",null,{"className":"absolute inset-0","children":[["$","video",null,{"autoPlay":true,"muted":true,"loop":true,"playsInline":true,"aria-hidden":"true","className":"absolute inset-0 w-full h-full object-cover","poster":"/hero-video.mp4","children":[["$","source",null,{"src":"/hero-video.mp4","type":"video/mp4"}],"Your browser does not support the video tag."]}],["$","div",null,{"className":"absolute inset-0 bg-black/30"}]]}],["$","div",null,{"className":"relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center","children":[["$","p",null,{"className":"mb-6 tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl","style":{"fontFamily":"Betterlett, serif"},"children":"Find Your Next Adventure"}],["$","p",null,{"className":"mb-8 max-w-2xl text-base text-white/90 sm:text-lg md:text-xl","children":"Curated nature-inspired journeys for the modern explorer."}]]}],["$","div",null,{"className":"absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce","children":["$","svg",null,{"className":"h-6 w-6 text-white","fill":"none","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":"2","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"d":"M19 14l-7 7m0 0l-7-7m7 7V3"}]}]}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
+2:I[57891,["/_next/static/chunks/d2b5a9c8c8dd72f0.js","/_next/static/chunks/95a353f0228e9f93.js"],"ClientPageRoot"]
+3:I[73958,["/_next/static/chunks/0b0a27722b413a98.js","/_next/static/chunks/a80fba7c35463608.js","/_next/static/chunks/6233b42f3191c49e.js"],"default"]
+6:I[95277,["/_next/static/chunks/d2b5a9c8c8dd72f0.js","/_next/static/chunks/95a353f0228e9f93.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"buildId":"wt9kRBrehYlkNRsN7Yp_I","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/6233b42f3191c49e.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null

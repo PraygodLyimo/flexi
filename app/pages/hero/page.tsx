@@ -1,3 +1,6 @@
+'use client'
+import { motion } from "framer-motion";
+
 export default function AdventureHero() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -22,9 +25,15 @@ export default function AdventureHero() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center">
-        <p className="mb-6 tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl" style={{ fontFamily: 'Betterlett, serif' }}>
+        <motion.h1
+          className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          style={{ fontFamily: 'Betterlett, cursive' }}
+        >
           Find Your Next Adventure
-        </p>
+        </motion.h1>
 
         <p className="mb-8 max-w-2xl text-base text-white/90 sm:text-lg md:text-xl">
           Curated nature-inspired journeys for the modern explorer.

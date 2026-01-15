@@ -56,7 +56,7 @@ export default function GalleryPage() {
     <>
       <div className="min-h-screen bg-white pt-24">
         {/* Page Header */}
-        <section className="text-[#947846] py-16">
+        <section className="text-[#947846] py-8">
           <motion.div
             className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, x: -20 }}
@@ -71,7 +71,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Gallery Content */}
-        <section className="py-20">
+        <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category Filter */}
             <motion.div

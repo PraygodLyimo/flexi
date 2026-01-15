@@ -85,6 +85,7 @@ function ToursPage() {
             duration: '7 Days',
             groupSize: '2-6 People',
             destinations: 'Serengeti & Ngorongoro',
+            image: '/serengeti.jpg',
             description: 'Visit two of Africa\'s Seven Natural Wonders in this action-packed week.',
             fullDescription: 'Experience the highlights of Tanzania in just 7 days. This safari covers the must-see destinations, giving you incredible wildlife viewing and dramatic landscapes. Perfect for those with limited time but big safari dreams.',
             itinerary: [
@@ -145,6 +146,7 @@ function ToursPage() {
             duration: '9 Days',
             groupSize: '2-8 People',
             destinations: 'Full Serengeti Circuit',
+            image: '/Ngorongoro.jpg',
             description: 'Witness the world\'s greatest wildlife spectacle - the Great Migration.',
             fullDescription: 'This extended safari gives you more time to follow the migration, increase wildlife encounters, and experience the raw beauty of the Serengeti. Ideal for wildlife photographers and serious safari enthusiasts.',
             itinerary: [
@@ -217,6 +219,7 @@ function ToursPage() {
             duration: '11 Days',
             groupSize: '1-10 People',
             destinations: 'Safari + Beach',
+            image: '/zanzibar.jpg',
             description: 'Best of both worlds: Wildlife adventure and tropical beach relaxation.',
             fullDescription: 'Combine an exciting safari with a relaxing beach escape. Experience the wildlife wonders of Tanzania followed by pristine beaches and cultural exploration of historic Zanzibar.',
             itinerary: [
@@ -299,6 +302,7 @@ function ToursPage() {
             duration: '15 Days',
             groupSize: '1-6 People',
             destinations: 'Ultimate Tanzania',
+            image: '/Tarangire.jpg',
             description: 'Travel at your own pace - Extended adventure with flexibility and luxury.',
             fullDescription: 'This comprehensive tour is designed for those who want the complete Tanzania experience. Spend more time in each location, enjoy luxury accommodations, and have flexibility to customize activities.',
             itinerary: [
@@ -398,7 +402,7 @@ function ToursPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 overflow-hidden",
+                className: "relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed",
@@ -409,12 +413,12 @@ function ToursPage() {
                             className: "absolute inset-0 bg-black/40"
                         }, void 0, false, {
                             fileName: "[project]/flexi/app/tours/page.tsx",
-                            lineNumber: 155,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 150,
+                        lineNumber: 155,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -432,7 +436,7 @@ function ToursPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 157,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -456,7 +460,7 @@ function ToursPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 170,
+                        lineNumber: 175,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -480,7 +484,7 @@ function ToursPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 182,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -506,7 +510,7 @@ function ToursPage() {
                                 children: "Our Safari Tours"
                             }, void 0, false, {
                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                lineNumber: 196,
+                                lineNumber: 201,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -529,7 +533,7 @@ function ToursPage() {
                                 children: "Experience the raw beauty of Tanzania's wilderness with our meticulously crafted luxury safari tours."
                             }, void 0, false, {
                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                lineNumber: 205,
+                                lineNumber: 210,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -546,19 +550,19 @@ function ToursPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                lineNumber: 214,
+                                lineNumber: 219,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 195,
+                        lineNumber: 200,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/flexi/app/tours/page.tsx",
-                lineNumber: 148,
+                lineNumber: 153,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -568,11 +572,11 @@ function ToursPage() {
                         className: "absolute inset-0 opacity-10 pointer-events-none bg-[url('/safari-pattern.png')] bg-repeat bg-[length:200px_200px]"
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 226,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        className: "py-20 relative z-10",
+                        className: "py-12 relative z-10",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -608,7 +612,7 @@ function ToursPage() {
                                                                         children: tour.title
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 249,
+                                                                        lineNumber: 254,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -618,20 +622,20 @@ function ToursPage() {
                                                                                 className: "h-3 w-3 mr-1"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 253,
+                                                                                lineNumber: 258,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             tour.destinations
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 252,
+                                                                        lineNumber: 257,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 248,
+                                                                lineNumber: 253,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -642,7 +646,7 @@ function ToursPage() {
                                                                         children: "FROM"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 258,
+                                                                        lineNumber: 263,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -653,19 +657,19 @@ function ToursPage() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 259,
+                                                                        lineNumber: 264,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 257,
+                                                                lineNumber: 262,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                        lineNumber: 247,
+                                                        lineNumber: 252,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -676,7 +680,7 @@ function ToursPage() {
                                                         children: tour.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                        lineNumber: 263,
+                                                        lineNumber: 268,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -691,12 +695,12 @@ function ToursPage() {
                                                                             className: "h-4 w-4 text-[#c89b5e]"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                            lineNumber: 270,
+                                                                            lineNumber: 275,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 269,
+                                                                        lineNumber: 274,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -704,13 +708,13 @@ function ToursPage() {
                                                                         children: tour.duration
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 272,
+                                                                        lineNumber: 277,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 268,
+                                                                lineNumber: 273,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -722,12 +726,12 @@ function ToursPage() {
                                                                             className: "h-4 w-4 text-[#c89b5e]"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                            lineNumber: 276,
+                                                                            lineNumber: 281,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 275,
+                                                                        lineNumber: 280,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -735,19 +739,19 @@ function ToursPage() {
                                                                         children: tour.groupSize
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 278,
+                                                                        lineNumber: 283,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 274,
+                                                                lineNumber: 279,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                        lineNumber: 267,
+                                                        lineNumber: 272,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -767,7 +771,7 @@ function ToursPage() {
                                                                         className: "absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-12"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 288,
+                                                                        lineNumber: 293,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -775,13 +779,13 @@ function ToursPage() {
                                                                         children: "Book This package"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 291,
+                                                                        lineNumber: 296,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 283,
+                                                                lineNumber: 288,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -801,7 +805,7 @@ function ToursPage() {
                                                                         className: "absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-12"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 304,
+                                                                        lineNumber: 309,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -809,38 +813,38 @@ function ToursPage() {
                                                                         children: expandedId === tour.id ? 'Hide' : 'Details'
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 307,
+                                                                        lineNumber: 312,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     expandedId === tour.id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__["ChevronUp"], {
                                                                         className: "h-4 w-4 relative z-10"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 308,
+                                                                        lineNumber: 313,
                                                                         columnNumber: 51
                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                                         className: "h-4 w-4 relative z-10"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 308,
+                                                                        lineNumber: 313,
                                                                         columnNumber: 101
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 293,
+                                                                lineNumber: 298,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                        lineNumber: 282,
+                                                        lineNumber: 287,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                lineNumber: 246,
+                                                lineNumber: 251,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -879,7 +883,7 @@ function ToursPage() {
                                                                                 className: "h-1 w-8 bg-[#c89b5e] rounded-full"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 327,
+                                                                                lineNumber: 332,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -887,13 +891,13 @@ function ToursPage() {
                                                                                 children: "Full Experience"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 328,
+                                                                                lineNumber: 333,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 326,
+                                                                        lineNumber: 331,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -901,13 +905,13 @@ function ToursPage() {
                                                                         children: tour.fullDescription
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 330,
+                                                                        lineNumber: 335,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 325,
+                                                                lineNumber: 330,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -920,7 +924,7 @@ function ToursPage() {
                                                                                 children: "Highlights"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 336,
+                                                                                lineNumber: 341,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -932,25 +936,25 @@ function ToursPage() {
                                                                                                 className: "h-3 w-3 text-[#c89b5e] mr-2 fill-[#c89b5e]"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                                lineNumber: 340,
+                                                                                                lineNumber: 345,
                                                                                                 columnNumber: 37
                                                                                             }, this),
                                                                                             h
                                                                                         ]
                                                                                     }, i, true, {
                                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                        lineNumber: 339,
+                                                                                        lineNumber: 344,
                                                                                         columnNumber: 35
                                                                                     }, this))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 337,
+                                                                                lineNumber: 342,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 335,
+                                                                        lineNumber: 340,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -960,7 +964,7 @@ function ToursPage() {
                                                                                 children: "What's Included"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 347,
+                                                                                lineNumber: 352,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -972,31 +976,31 @@ function ToursPage() {
                                                                                                 className: "h-3 w-3 text-green-500 mr-2"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                                lineNumber: 351,
+                                                                                                lineNumber: 356,
                                                                                                 columnNumber: 37
                                                                                             }, this),
                                                                                             item
                                                                                         ]
                                                                                     }, i, true, {
                                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                        lineNumber: 350,
+                                                                                        lineNumber: 355,
                                                                                         columnNumber: 35
                                                                                     }, this))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 348,
+                                                                                lineNumber: 353,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 346,
+                                                                        lineNumber: 351,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 334,
+                                                                lineNumber: 339,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1006,7 +1010,7 @@ function ToursPage() {
                                                                         children: "Detailed Daily Itinerary"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 361,
+                                                                        lineNumber: 366,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1024,12 +1028,12 @@ function ToursPage() {
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                            lineNumber: 366,
+                                                                                            lineNumber: 371,
                                                                                             columnNumber: 37
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                        lineNumber: 365,
+                                                                                        lineNumber: 370,
                                                                                         columnNumber: 35
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1039,7 +1043,7 @@ function ToursPage() {
                                                                                                 children: day.title
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                                lineNumber: 369,
+                                                                                                lineNumber: 374,
                                                                                                 columnNumber: 37
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1047,30 +1051,30 @@ function ToursPage() {
                                                                                                 children: day.desc
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                                lineNumber: 370,
+                                                                                                lineNumber: 375,
                                                                                                 columnNumber: 37
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                        lineNumber: 368,
+                                                                                        lineNumber: 373,
                                                                                         columnNumber: 35
                                                                                     }, this)
                                                                                 ]
                                                                             }, idx, true, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 364,
+                                                                                lineNumber: 369,
                                                                                 columnNumber: 33
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 362,
+                                                                        lineNumber: 367,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 360,
+                                                                lineNumber: 365,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1083,14 +1087,14 @@ function ToursPage() {
                                                                                 className: "h-3 w-3 mr-1"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 379,
+                                                                                lineNumber: 384,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             "All Inclusive Pricing"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 378,
+                                                                        lineNumber: 383,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1100,63 +1104,63 @@ function ToursPage() {
                                                                                 className: "h-3 w-3 mr-1"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                                lineNumber: 383,
+                                                                                lineNumber: 388,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             "Small Group Guarantee"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                        lineNumber: 382,
+                                                                        lineNumber: 387,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                                lineNumber: 377,
+                                                                lineNumber: 382,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                                        lineNumber: 323,
+                                                        lineNumber: 328,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/flexi/app/tours/page.tsx",
-                                                    lineNumber: 316,
+                                                    lineNumber: 321,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                                lineNumber: 314,
+                                                lineNumber: 319,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, tour.id, true, {
                                         fileName: "[project]/flexi/app/tours/page.tsx",
-                                        lineNumber: 239,
+                                        lineNumber: 244,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/flexi/app/tours/page.tsx",
-                                lineNumber: 231,
+                                lineNumber: 236,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/flexi/app/tours/page.tsx",
-                            lineNumber: 230,
+                            lineNumber: 235,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/tours/page.tsx",
-                        lineNumber: 229,
+                        lineNumber: 234,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/flexi/app/tours/page.tsx",
-                lineNumber: 224,
+                lineNumber: 229,
                 columnNumber: 7
             }, this)
         ]

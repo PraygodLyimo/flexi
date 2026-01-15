@@ -2436,9 +2436,9 @@ const africanCountries = [
 ];
 function MapPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full h-auto p-8 bg-white flex flex-col items-center",
+        className: "w-full h-auto py-6 px-4 bg-white flex flex-col items-center",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative h-[850px] w-full overflow-hidden shadow-inner",
+            className: "relative h-[400px] md:h-[500px] w-full overflow-hidden shadow-inner",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "to-background absolute inset-0 bg-radial from-transparent to-70% pointer-events-none"
@@ -2467,7 +2467,7 @@ function MapPage() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "absolute inset-0 flex items-center justify-center pointer-events-none z-10",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$registry$2f$magicui$2f$typing$2d$animation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TypingAnimation"], {
-                        className: "text-[#947846] text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center",
+                        className: "text-[#947846] text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center",
                         children: "Tanzania the Unforgettable"
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/pages/map/page.tsx",

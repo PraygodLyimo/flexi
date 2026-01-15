@@ -3,6 +3,7 @@
 import { Star, MapPin, DollarSign, Calendar, Users, ChevronDown, ChevronUp, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ToursPage() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -42,6 +43,7 @@ export default function ToursPage() {
       duration: '7 Days',
       groupSize: '2-6 People',
       destinations: 'Serengeti & Ngorongoro',
+      image: '/serengeti.jpg',
       description: 'Visit two of Africa\'s Seven Natural Wonders in this action-packed week.',
       fullDescription: 'Experience the highlights of Tanzania in just 7 days. This safari covers the must-see destinations, giving you incredible wildlife viewing and dramatic landscapes. Perfect for those with limited time but big safari dreams.',
       itinerary: [
@@ -65,6 +67,7 @@ export default function ToursPage() {
       duration: '9 Days',
       groupSize: '2-8 People',
       destinations: 'Full Serengeti Circuit',
+      image: '/Ngorongoro.jpg',
       description: 'Witness the world\'s greatest wildlife spectacle - the Great Migration.',
       fullDescription: 'This extended safari gives you more time to follow the migration, increase wildlife encounters, and experience the raw beauty of the Serengeti. Ideal for wildlife photographers and serious safari enthusiasts.',
       itinerary: [
@@ -90,6 +93,7 @@ export default function ToursPage() {
       duration: '11 Days',
       groupSize: '1-10 People',
       destinations: 'Safari + Beach',
+      image: '/zanzibar.jpg',
       description: 'Best of both worlds: Wildlife adventure and tropical beach relaxation.',
       fullDescription: 'Combine an exciting safari with a relaxing beach escape. Experience the wildlife wonders of Tanzania followed by pristine beaches and cultural exploration of historic Zanzibar.',
       itinerary: [
@@ -117,6 +121,7 @@ export default function ToursPage() {
       duration: '15 Days',
       groupSize: '1-6 People',
       destinations: 'Ultimate Tanzania',
+      image: '/Tarangire.jpg',
       description: 'Travel at your own pace - Extended adventure with flexibility and luxury.',
       fullDescription: 'This comprehensive tour is designed for those who want the complete Tanzania experience. Spend more time in each location, enjoy luxury accommodations, and have flexibility to customize activities.',
       itinerary: [
@@ -145,7 +150,7 @@ export default function ToursPage() {
 
   return (
     <>
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 overflow-hidden">
         {/* Cinematic Background Image */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
@@ -226,7 +231,7 @@ export default function ToursPage() {
         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/safari-pattern.png')] bg-repeat bg-[length:200px_200px]"></div>
 
         {/* Tours Section */}
-        <section className="py-20 relative z-10">
+        <section className="py-12 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               variants={staggerContainer}
@@ -242,6 +247,16 @@ export default function ToursPage() {
                   variants={staggerItem}
                   whileHover={{ y: -5, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)' }}
                 >
+                  {/* Tour Image */}
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={tour.image}
+                      alt={tour.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
                   {/* Card Content - Summary View */}
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-6">

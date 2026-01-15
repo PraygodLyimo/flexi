@@ -98,3 +98,623 @@ It can also happen if the client has a browser extension installed which messes 
 [03:13:03.621] Server  LOG      ✓ Compiled in 1009ms
 [03:13:50.929] Server  LOG      ✓ Compiled in 124ms
 [03:16:20.869] Server  LOG      ✓ Compiled in 1987ms
+[03:23:42.746] Server  LOG      ✓ Compiled in 627ms
+[03:26:59.145] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:27:05.225] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[03:27:05.225] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <div>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-...", ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[03:27:08.124] Server  LOG      ✓ Compiled in 472ms
+[03:32:55.762] Server  LOG      ✓ Compiled in 2.1s
+[03:33:17.948] Server  LOG      ✓ Compiled in 1087ms
+[03:33:44.465] Server  LOG      ✓ Compiled in 1271ms
+[03:34:05.655] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[03:34:05.655] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <div>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[03:34:24.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:34:32.179] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[03:34:32.179] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <div>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[03:38:27.021] Server  LOG      ✓ Compiled in 3.7s
+[03:38:51.498] Server  LOG      ○ Compiling /tours ...
+[03:39:20.097] Server  LOG      ✓ Compiled in 290ms
+[03:40:54.025] Server  ERROR   D:\flexi\flexi\.next\dev\server\chunks\ssr\94c11_5b8442dd._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[03:40:54.027] Server  ERROR   D:\flexi\flexi\.next\dev\server\chunks\ssr\[root-of-the-server]__f0f53f7b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[03:40:54.037] Server  ERROR    ⨯ Error: Attempted to call createMotionComponent() from the server but createMotionComponent is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[03:40:54.644] Browser ERROR   uncaughtError: Error: Attempted to call createMotionComponent() from the server but createMotionComponent is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[03:41:18.604] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:41:32.334] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[03:41:32.334] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[03:42:03.542] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:42:11.376] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[03:42:11.376] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[03:44:53.599] Server  LOG      ✓ Compiled in 462ms
+[03:45:26.225] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:45:42.902] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[03:45:42.902] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[03:46:55.173] Server  LOG      ✓ Compiled in 539ms
+[03:54:39.553] Server  LOG      ✓ Compiled in 363ms
+[03:54:48.764] Server  LOG      ✓ Compiled in 259ms
+[03:55:25.281] Server  LOG      ✓ Compiled in 155ms
+[03:57:05.666] Server  LOG      ✓ Compiled in 123ms
+[03:57:17.953] Server  LOG      ✓ Compiled in 134ms
+[03:57:56.072] Server  LOG      ✓ Compiled in 505ms
+[04:00:48.779] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:01:02.447] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[04:01:02.447] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[04:08:02.247] Server  LOG      ✓ Compiled in 567ms
+[04:11:36.389] Server  LOG      ✓ Compiled in 2.4s
+[04:11:59.958] Server  LOG      ✓ Compiled in 110ms
+[04:12:18.210] Server  LOG      ✓ Compiled in 214ms
+[04:13:46.506] Server  LOG      ✓ Compiled in 1388ms
+[05:28:13.906] Server  LOG      ✓ Compiled in 1499ms
+[05:32:52.493] Server  LOG      ✓ Compiled in 616ms
+[05:34:26.307] Server  LOG      ✓ Compiled in 173ms
+[05:37:12.899] Server  LOG      ✓ Compiled in 140ms
+[07:06:19.078] Server  LOG      ✓ Compiled in 259ms
+[07:06:57.377] Server  LOG      ✓ Compiled in 216ms
+[07:07:37.454] Server  LOG      ○ Compiling /gallery ...
+[07:16:51.759] Server  LOG      ✓ Compiled in 1813ms
+[07:17:34.859] Server  LOG      ✓ Compiled in 1380ms
+[07:17:58.983] Server  LOG      ✓ Compiled in 1270ms
+[07:22:26.949] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:22:39.369] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[07:22:39.369] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[07:24:00.247] Server  LOG      ✓ Compiled in 952ms
+[07:25:04.758] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:04.759] Browser WARN    Image with src "/zanzibar.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:04.759] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:04.759] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:04.891] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:04.891] Browser WARN    Image with src "/Manyara.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:06.037] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:06.037] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:06.662] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:06.662] Browser WARN    Image with src "/Tarangire.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:06.662] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:06.662] Browser WARN    Image with src "/serengeti.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:39.371] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:25:45.019] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[07:25:45.020] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[07:25:45.155] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:45.155] Browser WARN    Image with src "/serengeti.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:45.155] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:45.155] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:45.155] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:45.155] Browser WARN    Image with src "/Tarangire.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:45.155] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:45.155] Browser WARN    Image with src "/Manyara.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:45.155] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:45.155] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:25:45.155] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:25:45.155] Browser WARN    Image with src "/zanzibar.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[07:26:59.305] Server  LOG      ✓ Compiled in 2.1s
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.737] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:26:59.738] Browser WARN    Unexpected import of module [project]/flexi/node_modules/next/dist/shared/lib/match-local-pattern.js [app-client] (ecmascript) from module [project]/flexi/node_modules/next/dist/shared/lib/image-loader.js [app-client] (ecmascript), which was deleted by an HMR update
+[07:28:06.378] Server  LOG      ✓ Compiled in 293ms
+[07:28:22.585] Server  LOG      ✓ Compiled in 148ms
+[07:29:09.312] Server  LOG      ✓ Compiled in 102ms
+[07:29:58.270] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:30:05.287] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[07:30:05.287] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[07:32:32.373] Server  LOG      ✓ Compiled in 770ms
+[07:34:29.735] Server  LOG      ✓ Compiled in 1204ms
+[07:34:51.780] Server  LOG      ✓ Compiled in 119ms
+[07:36:10.628] Server  LOG      ✓ Compiled in 3.2s
+[07:36:13.437] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:36:13.437] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:36:13.437] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:36:13.437] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:36:13.966] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:36:13.967] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[07:37:07.725] Server  LOG      ✓ Compiled in 4.9s
+[07:40:06.150] Server  LOG      ✓ Compiled in 3.9s
+[07:40:06.230] Browser ERROR   ./flexi/app/components/PopularItineraries.tsx:7:8
+Ecmascript file had an error
+   5 | import { motion } from 'framer-motion';
+   6 | import Image from 'next/image';
+>  7 | import Image from 'next/image';
+     |        ^^^^^
+   8 |
+   9 | export default function PopularItineraries() {
+  10 |   const fadeInUp = {
+
+the name `Image` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./flexi/app/components/PopularItineraries.tsx
+    ./flexi/app/page.tsx
+[07:40:09.905] Browser ERROR   ./flexi/app/components/PopularItineraries.tsx:7:8
+Ecmascript file had an error
+   5 | import { motion } from 'framer-motion';
+   6 | import Image from 'next/image';
+>  7 | import Image from 'next/image';
+     |        ^^^^^
+   8 |
+   9 | export default function PopularItineraries() {
+  10 |   const fadeInUp = {
+
+the name `Image` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./flexi/app/components/PopularItineraries.tsx
+    ./flexi/app/page.tsx
+[07:40:20.947] Server  LOG      ✓ Compiled in 301ms
