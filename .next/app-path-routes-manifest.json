@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/aboutus/page": "/aboutus",
+  "/book/page": "/book",
+  "/contact/page": "/contact",
+  "/destinations/page": "/destinations",
+  "/favicon.ico/route": "/favicon.ico",
+  "/gallery/page": "/gallery",
+  "/page": "/",
+  "/pages/hero/page": "/pages/hero",
+  "/pages/map/page": "/pages/map",
+  "/pages/nav/page": "/pages/nav",
+  "/pages/packages/page": "/pages/packages",
+  "/tours/page": "/tours"
+}

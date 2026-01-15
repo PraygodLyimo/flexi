@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/aboutus/page": "app/aboutus/page.js",
+  "/book/page": "app/book/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/destinations/page": "app/destinations/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/page": "app/page.js",
+  "/pages/hero/page": "app/pages/hero/page.js",
+  "/pages/map/page": "app/pages/map/page.js",
+  "/pages/nav/page": "app/pages/nav/page.js",
+  "/pages/packages/page": "app/pages/packages/page.js",
+  "/tours/page": "app/tours/page.js"
+}

@@ -1,0 +1,31 @@
+module.exports = [
+"[project]/flexi/app/favicon.ico.mjs { IMAGE => \"[project]/flexi/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", ((__turbopack_context__) => {
+
+__turbopack_context__.n(__turbopack_context__.i("[project]/flexi/app/favicon.ico.mjs { IMAGE => \"[project]/flexi/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript)"));
+}),
+"[externals]/next/dist/shared/lib/no-fallback-error.external.js [external] (next/dist/shared/lib/no-fallback-error.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/shared/lib/no-fallback-error.external.js", () => require("next/dist/shared/lib/no-fallback-error.external.js"));
+
+module.exports = mod;
+}),
+"[project]/flexi/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {
+
+__turbopack_context__.n(__turbopack_context__.i("[project]/flexi/app/layout.tsx [app-rsc] (ecmascript)"));
+}),
+"[project]/flexi/app/tours/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+import * as clientProxy from "./page.tsx" with {
+    "__turbopack-helper__": "true",
+    "turbopack-transition": "next-ecmascript-client-reference"
+};
+__turbopack_context__.n(clientProxy);
+}),
+"[project]/flexi/app/tours/page.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {
+
+__turbopack_context__.n(__turbopack_context__.i("[project]/flexi/app/tours/page.tsx [app-rsc] (ecmascript)"));
+}),
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__78dd6603._.js.map

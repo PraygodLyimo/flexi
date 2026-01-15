@@ -1,0 +1,100 @@
+[00:00:01.926] Server  LOG      ✓ Ready in 1448ms
+[00:00:07.704] Server  LOG      ○ Compiling / ...
+[00:00:19.263] Server  ERROR   React does not recognize the `dotColor` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `dotcolor` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+[00:00:22.456] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:35.508] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[00:00:35.508] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <div>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-[...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"2..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                  ...
+              ...
+            ...
+
+[00:00:38.379] Server  LOG      ○ Compiling /contact ...
+[01:45:06.184] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:45:55.869] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[01:45:55.870] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <div>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-[...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"2..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                  ...
+              ...
+            ...
+
+[02:15:35.093] Server  LOG      ✓ Compiled in 4s
+[02:15:46.448] Server  LOG      ✓ Compiled in 2.4s
+[03:06:40.518] Server  LOG      ○ Compiling /aboutus ...
+[03:07:31.093] Server  LOG      ✓ Compiled in 1587ms
+[03:08:06.594] Server  LOG      ✓ Compiled in 833ms
+[03:10:57.198] Server  LOG      ✓ Compiled in 637ms
+[03:12:50.968] Server  LOG      ✓ Compiled in 438ms
+[03:13:03.621] Server  LOG      ✓ Compiled in 1009ms
+[03:13:50.929] Server  LOG      ✓ Compiled in 124ms
+[03:16:20.869] Server  LOG      ✓ Compiled in 1987ms
