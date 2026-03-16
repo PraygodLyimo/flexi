@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+import { ScrollProgress } from "@/registry/magicui/scroll-progress";
 
 export default function AboutUs() {
   const fadeInUp = {
@@ -105,6 +106,7 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen bg-linear-to-b from-white to-gray-50">
+      <ScrollProgress className="top-[0px]" />
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 pt-24 sm:pt-32">
         <motion.div

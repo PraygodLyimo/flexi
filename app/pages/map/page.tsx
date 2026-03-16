@@ -1,7 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { DottedMap } from "@/registry/magicui/dotted-map"
 import { TypingAnimation } from "@/registry/magicui/typing-animation"
+import { motion } from 'framer-motion';
+import { Marquee, MarqueeContent, MarqueeItem } from "@/components/ui/marquee";
+import { TextAnimate } from "@/registry/magicui/text-animate";
+import { WordRotate } from "@/registry/magicui/word-rotate";
 
 const markers = [
     { name: 'Arusha', lat: -3.3731, lng: 36.6853, size: 0.3 },
@@ -33,6 +37,15 @@ const africanCountries = [
 ]
 
 export default function MapPage() {
+    const [key, setKey] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setKey(prev => prev + 1);
+        }, 6000); // Repeat every 6 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="w-full h-auto py-6 px-4 bg-white flex flex-col items-center">
             <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden shadow-inner">
@@ -48,9 +61,10 @@ export default function MapPage() {
                     style={{ width: "100%", height: "100%" }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-                    <TypingAnimation className="text-[#947846] text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center">
-                        Tanzania the Unforgettable
-                    </TypingAnimation>
+                    <WordRotate
+                        className="text-[#947846] text-4xl md:text-7xl font-serif font-bold tracking-wide drop-shadow-lg px-4 text-center justify-center"
+                        words={["Tanzania the Unforgettable", "Experience the Wild", "Africa's Best Safari"]}
+                    />
                 </div>
             </div>
         </div>

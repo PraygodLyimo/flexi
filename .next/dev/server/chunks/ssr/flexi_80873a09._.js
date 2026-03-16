@@ -1244,7 +1244,7 @@ function Destinations() {
                                                     src: destination.image,
                                                     alt: destination.name,
                                                     fill: true,
-                                                    className: "object-cover blur-sm"
+                                                    className: "object-cover blur-[2px]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/flexi/app/components/Destinations.tsx",
                                                     lineNumber: 113,
@@ -2359,7 +2359,9 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/flexi/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$registry$2f$magicui$2f$dotted$2d$map$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/flexi/registry/magicui/dotted-map.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$registry$2f$magicui$2f$typing$2d$animation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/flexi/registry/magicui/typing-animation.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$components$2f$ui$2f$marquee$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/flexi/components/ui/marquee.tsx [app-ssr] (ecmascript)");
 'use client';
+;
 ;
 ;
 ;
@@ -2493,7 +2495,7 @@ function MapPage() {
                     className: "to-background absolute inset-0 bg-radial from-transparent to-70% pointer-events-none"
                 }, void 0, false, {
                     fileName: "[project]/flexi/app/pages/map/page.tsx",
-                    lineNumber: 39,
+                    lineNumber: 41,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$registry$2f$magicui$2f$dotted$2d$map$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DottedMap"], {
@@ -2510,33 +2512,59 @@ function MapPage() {
                     }
                 }, void 0, false, {
                     fileName: "[project]/flexi/app/pages/map/page.tsx",
-                    lineNumber: 40,
+                    lineNumber: 42,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0 flex items-center justify-center pointer-events-none z-10",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$registry$2f$magicui$2f$typing$2d$animation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TypingAnimation"], {
-                        className: "text-[#947846] text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center",
-                        children: "Tanzania the Unforgettable"
+                    className: "absolute inset-0 flex items-center justify-center pointer-events-none z-10 overflow-hidden",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$components$2f$ui$2f$marquee$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Marquee"], {
+                        speed: 30,
+                        className: "w-full",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$components$2f$ui$2f$marquee$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MarqueeContent"], {
+                            children: [
+                                1,
+                                2,
+                                3,
+                                4
+                            ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$components$2f$ui$2f$marquee$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MarqueeItem"], {
+                                    className: "px-8",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$flexi$2f$registry$2f$magicui$2f$typing$2d$animation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TypingAnimation"], {
+                                        className: "text-[#947846] text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] px-4 text-center whitespace-nowrap",
+                                        children: "Tanzania the Unforgettable"
+                                    }, void 0, false, {
+                                        fileName: "[project]/flexi/app/pages/map/page.tsx",
+                                        lineNumber: 57,
+                                        columnNumber: 37
+                                    }, this)
+                                }, i, false, {
+                                    fileName: "[project]/flexi/app/pages/map/page.tsx",
+                                    lineNumber: 56,
+                                    columnNumber: 33
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/flexi/app/pages/map/page.tsx",
+                            lineNumber: 54,
+                            columnNumber: 25
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/flexi/app/pages/map/page.tsx",
-                        lineNumber: 51,
+                        lineNumber: 53,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/flexi/app/pages/map/page.tsx",
-                    lineNumber: 50,
+                    lineNumber: 52,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/flexi/app/pages/map/page.tsx",
-            lineNumber: 38,
+            lineNumber: 40,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/flexi/app/pages/map/page.tsx",
-        lineNumber: 37,
+        lineNumber: 39,
         columnNumber: 9
     }, this);
 }

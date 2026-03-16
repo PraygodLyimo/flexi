@@ -114,7 +114,7 @@ export default function PopularItineraries() {
             >
 
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
                 <Image
                   src={itinerary.image}
                   alt={itinerary.title}
@@ -128,7 +128,7 @@ export default function PopularItineraries() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
+              <div className="p-4">
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {itinerary.title}

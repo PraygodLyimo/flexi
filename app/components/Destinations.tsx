@@ -1,12 +1,25 @@
 'use client';
 
-import { MapPin, Mountain, Users, TrendingUp } from 'lucide-react';
+import { MapPin, Mountain, Users, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import { Marquee, MarqueeContent, MarqueeItem } from '@/components/ui/marquee';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRef } from 'react';
 
 export default function Destinations() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 340; // card width + gap
+      const newScrollLeft = scrollContainerRef.current.scrollLeft + (direction === 'right' ? scrollAmount : -scrollAmount);
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -84,7 +97,8 @@ export default function Destinations() {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/pattern-zebra.svg')] opacity-30 pointer-events-none" style={{ backgroundSize: '200px' }}></div>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -99,22 +113,26 @@ export default function Destinations() {
           </p>
         </motion.div>
 
-        {/* Destinations Marquee */}
-        <Marquee pauseOnHover speed={25} className="mb-8">
-          <MarqueeContent>
+        {/* Destinations Slider */}
+        <div className="relative mb-8 group">
+          <div
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide scroll-smooth"
+            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
+          >
             {destinations.map((destination) => (
-              <MarqueeItem key={destination.id} className="w-[380px]">
+              <div key={destination.id} className="min-w-[320px] w-[320px] snap-center">
                 <div
                   id={destination.name.toLowerCase()}
                   className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-white group cursor-pointer h-full"
                 >
                   {/* Background Image */}
-                  <div className="relative h-full min-h-[400px]">
+                  <div className="relative h-full min-h-[350px]">
                     <Image
                       src={destination.image}
                       alt={destination.name}
                       fill
-                      className="object-cover blur-sm"
+                      className="object-cover blur-[2px]"
                     />
                     {/* Dark overlay for text readability */}
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
@@ -123,7 +141,7 @@ export default function Destinations() {
                   {/* Content Overlay */}
                   <div className="absolute inset-0 flex flex-col">
                     {/* Top Section */}
-                    <div className="p-8 flex-1">
+                    <div className="p-6 flex-1">
                       <div className="text-3xl mb-4 font-bold">{destination.name}</div>
                       <p className="text-white/90 mb-6">{destination.description}</p>
 
@@ -149,10 +167,32 @@ export default function Destinations() {
                     </Link>
                   </div>
                 </div>
-              </MarqueeItem>
+              </div>
             ))}
-          </MarqueeContent>
-        </Marquee>
+          </div>
+
+          {/* Navigation Buttons */}
+          <div className="flex justify-center gap-6 mt-8">
+            <motion.button
+              onClick={() => scroll('left')}
+              className="p-4 rounded-full border-2 border-[#947846] text-[#947846] bg-transparent hover:bg-[#947846] hover:text-[#f7e6cc] transition-all duration-300 shadow-lg hover:shadow-[#947846]/40"
+              aria-label="Scroll left"
+              whileHover={{ scale: 1.1, x: -5 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronLeft className="w-8 h-8" />
+            </motion.button>
+            <motion.button
+              onClick={() => scroll('right')}
+              className="p-4 rounded-full border-2 border-[#947846] text-[#947846] bg-transparent hover:bg-[#947846] hover:text-[#f7e6cc] transition-all duration-300 shadow-lg hover:shadow-[#947846]/40"
+              aria-label="Scroll right"
+              whileHover={{ scale: 1.1, x: 5 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronRight className="w-8 h-8" />
+            </motion.button>
+          </div>
+        </div>
 
         {/* Additional Info */}
         <motion.div

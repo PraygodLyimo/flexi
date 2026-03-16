@@ -63,7 +63,7 @@ export default function PopularPackages() {
               style={{ transitionDelay: pkg.delay }}
             >
               {/* Image Container */}
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
                 <img
                   src={pkg.image}
                   alt={pkg.title}
@@ -87,7 +87,7 @@ export default function PopularPackages() {
               </div>
 
               {/* Card Content */}
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="mb-2 text-xl font-bold transition-colors duration-300" style={{ color: '#5c421d' }}>
                   {pkg.title}
                 </h3>
