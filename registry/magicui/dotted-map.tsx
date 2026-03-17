@@ -37,6 +37,7 @@ export function DottedMap({
     markers = [],
     highlights = [],
     countries = [],
+    dotColor = "currentColor",
     markerColor = "#FF6900",
     dotRadius = 0.2,
     stagger = true,
@@ -125,7 +126,7 @@ export function DottedMap({
                 })
 
                 const isHighlighted = activeHighlightIndex !== -1
-                const color = isHighlighted ? highlights[activeHighlightIndex].color : "currentColor"
+                const color = isHighlighted ? highlights[activeHighlightIndex].color : dotColor
 
                 return (
                     <motion.circle
