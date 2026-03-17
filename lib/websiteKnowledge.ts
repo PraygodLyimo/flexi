@@ -7,6 +7,22 @@ export interface WebsiteKnowledgeItem {
 }
 
 const WEBSITE_KNOWLEDGE: WebsiteKnowledgeItem[] = [
+    {
+        id: "booking guide",
+        title: "Booking Guide",
+        route: "/book",
+        keywords: ["how to book", "booking process", "reservation steps", "how to reserve", "booking guide"],
+        answer:
+          "To book a safari, start by exploring our tour packages or contact us for a custom itinerary. Once you choose your preferred option, you can request a quote and finalize your reservation with a deposit.",
+    },
+    {
+        id: "payment options",
+        title: "Payment Options",
+        route: "/contact",
+        keywords: ["payment", "pay", "options", "methods", "how to pay"],
+        answer:
+          "While in your safari the main payment options available are cash and credit card. While booking your trip we only accept bank transfers as our main payment option. Specific payment instructions will be provided during the booking process.",
+    },
   {
     id: "contact-main",
     title: "Contact Information",
