@@ -12,5 +12,6 @@
   "/pages/map/page": "app/pages/map/page.js",
   "/pages/nav/page": "app/pages/nav/page.js",
   "/pages/packages/page": "app/pages/packages/page.js",
+  "/services/page": "app/services/page.js",
   "/tours/page": "app/tours/page.js"
 }

@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion";
-import { ElementType } from "react";
+import { ElementType, useMemo } from "react";
 
 type AnimationType =
     | "blurIn"
@@ -85,7 +85,8 @@ export function TextAnimate({
     duration = 0.3,
     ...props
 }: TextAnimateProps) {
-    const MotionComponent = motion(Component);
+    // eslint-disable-next-line react-hooks/static-components
+    const MotionComponent = useMemo(() => motion(Component), [Component]);
 
     const containerVariants: Variants = {
         hidden: {},

@@ -14,7 +14,6 @@ export function TypingAnimation({
     children,
     duration = 100,
     className,
-    startOnView = false,
 }: TypingAnimationProps) {
     const [displayedText, setDisplayedText] = useState<string>("");
     const [i, setI] = useState<number>(0);

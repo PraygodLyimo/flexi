@@ -1,9 +1,9 @@
-[00:00:02.279] Server  LOG      ✓ Ready in 1768ms
-[00:00:19.102] Server  LOG      ○ Compiling / ...
-[00:00:29.389] Server  ERROR   React does not recognize the `dotColor` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `dotcolor` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
-[00:00:32.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:37.389] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
-[00:00:37.389] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:03.742] Server  LOG      ✓ Ready in 2.8s
+[00:00:35.867] Server  LOG      ○ Compiling / ...
+[00:00:50.288] Server  ERROR   React does not recognize the `dotColor` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `dotcolor` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+[00:00:53.515] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:01.749] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[00:01:01.749] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -45,17 +45,225 @@ It can also happen if the client has a browser extension installed which messes 
               ...
             ...
 
-[00:00:37.518] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:37.519] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:37.519] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:42.613] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:42.613] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:42.745] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:25.467] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:25.900] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:25.900] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:25.900] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:25.900] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:00.844] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
-[00:04:02.717] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:02.717] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:02.080] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:02.080] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:02.080] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:02.080] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:02.080] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:02.227] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:17.377] Server  LOG      ✓ Compiled in 3.7s
+[00:52:37.077] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:45.401] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[00:52:45.401] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[00:52:45.548] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:52:45.548] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:52:45.548] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:53:11.853] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:53:11.853] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:53:11.853] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:07:23.818] Server  LOG      ✓ Compiled in 1935ms
+[01:07:27.613] Browser ERROR   ./flexi/app/components/ChatBot.tsx:39:7
+Parsing ecmascript source code failed
+  37 | // ... existing code
+  38 |
+> 39 | const BOT_KNOWLEDGE = {
+     |       ^^^^^^^^^^^^^
+  40 |   tours: [
+  41 |     { title: "7-Day Tanzania Safari", price: "$1,588", description: "Covers Serengeti & Ngorongoro Crater. Focuses on Big Five and Great Migration highlights." },
+  42 |     { title: "9-Day Great Migration Safari", price: "$2,289", description: "Full Serengeti circuit focusing on migration tracking and river crossings." },
+
+Unexpected token `BOT_KNOWLEDGE`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import trace:
+  Server Component:
+    ./flexi/app/components/ChatBot.tsx
+    ./flexi/app/layout.tsx
+[01:07:27.966] Browser ERROR   ./flexi/app/components/ChatBot.tsx:39:7
+Parsing ecmascript source code failed
+  37 | // ... existing code
+  38 |
+> 39 | const BOT_KNOWLEDGE = {
+     |       ^^^^^^^^^^^^^
+  40 |   tours: [
+  41 |     { title: "7-Day Tanzania Safari", price: "$1,588", description: "Covers Serengeti & Ngorongoro Crater. Focuses on Big Five and Great Migration highlights." },
+  42 |     { title: "9-Day Great Migration Safari", price: "$2,289", description: "Full Serengeti circuit focusing on migration tracking and river crossings." },
+
+Unexpected token `BOT_KNOWLEDGE`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import trace:
+  Server Component:
+    ./flexi/app/components/ChatBot.tsx
+    ./flexi/app/layout.tsx
+[01:07:41.285] Server  LOG      ✓ Compiled in 177ms
+[01:08:09.594] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:17.577] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[01:08:17.577] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[01:08:17.796] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:08:17.796] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:08:17.796] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:10:22.679] Server  LOG      ○ Compiling /gallery ...
+[03:09:58.800] Server  LOG      ✓ Compiled in 1541ms
+[04:39:09.977] Server  LOG      ✓ Compiled in 4.1s
+[04:39:41.106] Server  LOG      ✓ Compiled in 3.1s
+[04:40:46.329] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:42:18.204] Server  LOG      ✓ Compiled in 320ms
+[04:45:54.851] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:45:55.512] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:45:55.512] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:45:55.512] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:45:56.882] Server  LOG      ○ Compiling /_not-found/page ...
+[04:47:33.650] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:48:32.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:48:45.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:49:46.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:52:51.090] Server  LOG      ✓ Compiled in 11.5s
+[04:55:07.065] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:56:02.868] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[04:56:04.053] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:56:04.054] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:56:04.054] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:56:09.497] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:56:09.497] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:56:09.497] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[20:34:51.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[21:52:56.014] Server  ERROR   D:\flexi\flexi\node_modules\next\dist\server\dev\log-requests.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[21:52:56.077] Server  ERROR   D:\flexi\flexi\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[21:52:56.101] Server  ERROR   Error: EPIPE: broken pipe, write
+[21:52:56.113] Server  ERROR   D:\flexi\flexi\node_modules\next\dist\server\dev\log-requests.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[21:52:56.120] Server  ERROR   D:\flexi\flexi\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[21:52:56.121] Server  ERROR    ⨯ "uncaughtException:" Error: EPIPE: broken pipe, write
+[21:52:56.132] Server  ERROR   D:\flexi\flexi\node_modules\next\dist\server\dev\log-requests.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[21:52:56.141] Server  ERROR   D:\flexi\flexi\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[21:52:56.147] Server  ERROR    ⨯ "uncaughtException: " Error: EPIPE: broken pipe, write
+[21:52:58.810] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[21:53:07.211] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. dotColor dotcolor
+[21:53:07.211] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="/flexi/app...">
+                <SegmentTrieNode>
+                <Home>
+                  <AdventureHero>
+                  <Home>
+                    <MapPage>
+                      <div className="w-full h-a...">
+                        <div className="relative h...">
+                          <div>
+                          <DottedMap markers={[...]} highlights={[...]} countries={[...]} dotColor="#d6d3d1" ...>
+                            <motion.svg viewBox="87 38 5 5" animate={{viewBox:"-..."}} transition={{duration:2.5, ...}} ...>
+                              <svg
+                                viewBox="87 38 5 5"
+                                className="text-gray-500 dark:text-gray-500"
++                               dotColor="#d6d3d1"
+-                               dotColor="#d6d3d1"
+                                style={{width:"100%",height:"100%"}}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                  ...
+              ...
+            ...
+
+[21:53:07.370] Browser WARN    Image with src "/Ngorongoro.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[21:53:07.370] Browser WARN    Image with src "/serengeti.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[21:53:07.370] Browser WARN    Image with src "/zanzibar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[21:53:15.141] Browser WARN    Image with src "/Manyara.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[21:53:15.141] Browser WARN    Image with src "/Kilimanjaro.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[21:53:15.141] Browser WARN    Image with src "/Tarangire.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

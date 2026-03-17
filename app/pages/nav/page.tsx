@@ -55,6 +55,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 className="group relative px-3 xl:px-4 py-2 text-white text-sm font-medium transition-colors duration-300"
+                style={{ fontFamily: 'var(--font-montserrat)' }}
               >
                 <span>{link.label}</span>
                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: '#c89b5e' }}></span>
@@ -63,7 +64,7 @@ export default function Navbar() {
 
             {/* Desktop Destinations Dropdown */}
             <div className="group relative px-3 xl:px-4 py-2">
-              <button className="flex items-center space-x-1 text-white text-sm font-medium transition-colors duration-300">
+              <button className="flex items-center space-x-1 text-white text-sm font-medium transition-colors duration-300" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <span>DESTINATIONS</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -73,6 +74,7 @@ export default function Navbar() {
                     key={dest.label}
                     href={dest.href}
                     className="block px-4 py-2.5 text-gray-700 text-sm transition-colors"
+                    style={{ fontFamily: 'var(--font-montserrat)' }}
                   >
                     {dest.label}
                   </Link>
@@ -84,7 +86,7 @@ export default function Navbar() {
           {/* DESKTOP BOOK BUTTON */}
           <div className="hidden lg:flex items-center">
             <Link href="/book">
-              <InteractiveHoverButton className="w-auto px-6 border-[#947846] text-[#947846]">
+              <InteractiveHoverButton className="w-auto px-6 border-[#947846] text-[#947846]" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 BOOK ADVENTURE
               </InteractiveHoverButton>
             </Link>
@@ -120,6 +122,7 @@ export default function Navbar() {
                   href={link.href}
                   className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
+                  style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                   {link.label}
                 </Link>
@@ -130,6 +133,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setIsDestinationsOpen(!isDestinationsOpen)}
                   className="w-full text-left rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors flex items-center justify-between"
+                  style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                   <span>DESTINATIONS</span>
                   <ChevronDown
@@ -149,6 +153,7 @@ export default function Navbar() {
                           setIsMenuOpen(false);
                           setIsDestinationsOpen(false);
                         }}
+                        style={{ fontFamily: 'var(--font-montserrat)' }}
                       >
                         {dest.label}
                       </Link>
@@ -159,7 +164,7 @@ export default function Navbar() {
 
               {/* Mobile Book Button */}
               <div className="pt-3 border-t border-white/10">
-                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-semibold transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc' }}>
+                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-semibold transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc', fontFamily: 'var(--font-montserrat)' }}>
                   BOOK ADVENTURE
                 </Link>
               </div>
