@@ -30,7 +30,7 @@ export default function AdventureHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          style={{ fontFamily: 'Betterlett, cursive' }}
+          style={{ fontFamily: 'var(--font-montserrat)' }}
         >
           Find Your Next Adventure
         </motion.h1>

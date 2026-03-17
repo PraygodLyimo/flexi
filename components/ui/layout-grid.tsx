@@ -8,6 +8,7 @@ type Card = {
   content: React.ReactElement | React.ReactNode | string;
   className: string;
   thumbnail: string;
+  category?: string;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
@@ -60,16 +61,30 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.img
-      layoutId={`image-${card.id}-image`}
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+    <>
+      <motion.img
+        layoutId={`image-${card.id}-image`}
+        src={card.thumbnail}
+        height="500"
+        width="500"
+        className={cn(
+          "object-cover object-top absolute inset-0 h-full w-full transition duration-300 group-hover:scale-105"
+        )}
+        alt="thumbnail"
+      />
+      
+      {/* Category Overlay */}
+      {card.category && (
+        <div className="absolute inset-x-0 bottom-0 z-20 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+          <p 
+             className="text-white font-bold text-lg tracking-[3px] uppercase underline underline-offset-8 decoration-2 decoration-[#c89b5e] pb-2 drop-shadow-md"
+             style={{ fontFamily: 'var(--font-montserrat)' }}
+          >
+            {card.category}
+          </p>
+        </div>
       )}
-      alt="thumbnail"
-    />
+    </>
   );
 };
 

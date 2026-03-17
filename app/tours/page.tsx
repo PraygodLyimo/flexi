@@ -203,7 +203,7 @@ export default function ToursPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            style={{ fontFamily: 'Betterlett, cursive' }}
+            style={{ fontFamily: 'var(--font-montserrat)' }}
           >
             Our Safari Tours
           </motion.h1>
@@ -212,7 +212,7 @@ export default function ToursPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            style={{ fontFamily: 'Myriad Pro, sans-serif' }}
+            style={{ fontFamily: 'var(--font-montserrat)' }}
           >
             Experience the raw beauty of Tanzania's wilderness with our meticulously crafted luxury safari tours.
           </motion.p>
@@ -261,7 +261,7 @@ export default function ToursPage() {
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-6">
                       <div className="max-w-[70%]">
-                        <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-2" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>
+                        <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
                           {tour.title}
                         </h2>
                         <div className="flex items-center text-sm text-[#947846] font-semibold">
@@ -275,7 +275,7 @@ export default function ToursPage() {
                       </div>
                     </div>
 
-                    <p className="text-gray-600 mb-8 line-clamp-2 text-sm leading-relaxed" style={{ fontFamily: 'Myriad Pro, sans-serif' }}>
+                    <p className="text-gray-600 mb-8 line-clamp-2 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-montserrat)' }}>
                       {tour.description}
                     </p>
 
@@ -296,7 +296,8 @@ export default function ToursPage() {
 
                     <div className="flex space-x-4">
                       <motion.button
-                        className="flex-[2] py-4 px-6 rounded-2xl font-bold text-sm bg-[#947846] text-white shadow-lg shadow-[#947846]/20 relative overflow-hidden group"
+                        className="flex-[2] py-4 px-6 rounded-2xl font-bold text-sm bg-[#947846] text-white shadow-lg shadow-[#947846]/20 relative overflow-hidden group uppercase tracking-[3px]"
+                        style={{ fontFamily: 'var(--font-montserrat)' }}
                         whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -306,7 +307,8 @@ export default function ToursPage() {
                         <span className="relative z-10">Book This package</span>
                       </motion.button>
                       <motion.button
-                        className="flex-1 py-4 px-4 rounded-2xl font-bold text-sm border-2 border-[#947846] text-[#947846] flex items-center justify-center space-x-2 relative overflow-hidden group transition-colors duration-300"
+                        className="flex-1 py-4 px-4 rounded-2xl font-bold text-sm border-2 border-[#947846] text-[#947846] flex items-center justify-center space-x-2 relative overflow-hidden group transition-colors duration-300 uppercase tracking-[3px]"
+                        style={{ fontFamily: 'var(--font-montserrat)' }}
                         whileHover={{
                           scale: 1.05,
                           backgroundColor: '#947846',

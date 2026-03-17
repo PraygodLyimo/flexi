@@ -36,13 +36,13 @@ export default function Navbar() {
             <Mountain className="h-6 w-6 sm:h-8 sm:w-8" style={{ color: '#c89b5e' }} />
             <span
               className='hidden xs:inline text-white font-extrabold text-sm sm:text-base md:text-lg'
-              style={{ fontFamily: 'Shadows into Light Two' }}
+              style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               FLEXI WILD SAFARI
             </span>
             <span
               className='xs:hidden text-white font-extrabold text-xs'
-              style={{ fontFamily: 'Shadows into Light Two' }}
+              style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               FLEXI
             </span>
@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative px-3 xl:px-4 py-2 text-white text-sm font-medium transition-colors duration-300"
+                className="group relative px-2 xl:px-4 py-2 text-white text-[11px] xl:text-xs font-bold transition-colors duration-300 uppercase tracking-[3px]"
                 style={{ fontFamily: 'var(--font-montserrat)' }}
               >
                 <span>{link.label}</span>
@@ -64,7 +64,7 @@ export default function Navbar() {
 
             {/* Desktop Destinations Dropdown */}
             <div className="group relative px-3 xl:px-4 py-2">
-              <button className="flex items-center space-x-1 text-white text-sm font-medium transition-colors duration-300" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <button className="flex items-center space-x-1 text-white text-[11px] xl:text-xs font-bold transition-colors duration-300 uppercase tracking-[3px]" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <span>DESTINATIONS</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -73,7 +73,7 @@ export default function Navbar() {
                   <Link
                     key={dest.label}
                     href={dest.href}
-                    className="block px-4 py-2.5 text-gray-700 text-sm transition-colors"
+                    className="block px-4 py-2.5 text-gray-700 text-[11px] font-bold hover:text-[#947846] transition-colors uppercase tracking-[3px]"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                   >
                     {dest.label}
@@ -86,7 +86,7 @@ export default function Navbar() {
           {/* DESKTOP BOOK BUTTON */}
           <div className="hidden lg:flex items-center">
             <Link href="/book">
-              <InteractiveHoverButton className="w-auto px-6 border-[#947846] text-[#947846]" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <InteractiveHoverButton className="w-auto px-4 xl:px-6 border-[#947846] text-[#947846] text-[10px] xl:text-xs uppercase tracking-[3px]" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 BOOK ADVENTURE
               </InteractiveHoverButton>
             </Link>
@@ -120,7 +120,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors"
+                  className="block rounded-lg px-4 py-3 text-[13px] font-bold text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
                   onClick={() => setIsMenuOpen(false)}
                   style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
@@ -132,7 +132,7 @@ export default function Navbar() {
               <div className="space-y-1">
                 <button
                   onClick={() => setIsDestinationsOpen(!isDestinationsOpen)}
-                  className="w-full text-left rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors flex items-center justify-between"
+                  className="w-full text-left rounded-lg px-4 py-3 text-[13px] font-bold text-white hover:bg-white/10 transition-colors flex items-center justify-between uppercase tracking-[3px]"
                   style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                   <span>DESTINATIONS</span>
@@ -148,7 +148,7 @@ export default function Navbar() {
                       <Link
                         key={dest.label}
                         href={dest.href}
-                        className="block rounded px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                        className="block rounded px-4 py-2 text-[11px] font-bold text-white/80 hover:text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
                         onClick={() => {
                           setIsMenuOpen(false);
                           setIsDestinationsOpen(false);
@@ -164,7 +164,7 @@ export default function Navbar() {
 
               {/* Mobile Book Button */}
               <div className="pt-3 border-t border-white/10">
-                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-semibold transition-colors" style={{ backgroundColor: '#947846', color: '#f7e6cc', fontFamily: 'var(--font-montserrat)' }}>
+                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-semibold transition-colors uppercase tracking-[3px]" style={{ backgroundColor: '#947846', color: '#f7e6cc', fontFamily: 'var(--font-montserrat)' }}>
                   BOOK ADVENTURE
                 </Link>
               </div>

@@ -16,7 +16,12 @@ export default function GalleryPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-bold mb-4 tracking-tight">Our Safari Gallery</h1>
+          <h1 
+            className="text-5xl font-bold mb-4 tracking-[3px] uppercase" 
+            style={{ fontFamily: 'var(--font-montserrat)' }}
+          >
+            Our Safaris Gallery
+          </h1>
           <p className="text-xl text-gray-800 max-w-2xl mx-auto">
             <LoaderFive text="Immerse yourself in the visual wonders of the African savanna" />
           </p>
@@ -37,8 +42,8 @@ export default function GalleryPage() {
                 Ready to capture your own?
             </p>
           <motion.button
-            className="font-bold py-4 px-10 rounded-full transition-all relative overflow-hidden group shadow-xl"
-            style={{ backgroundColor: "#947846", color: "#f7e6cc" }}
+            className="font-bold py-4 px-10 rounded-full transition-all relative overflow-hidden group shadow-xl uppercase tracking-[3px]"
+            style={{ backgroundColor: "#947846", color: "#f7e6cc", fontFamily: 'var(--font-montserrat)' }}
             whileHover={{ scale: 1.05, boxShadow: "0 25px 30px -5px rgba(148, 120, 70, 0.3)" }}
             whileTap={{ scale: 0.95 }}
           >
@@ -110,35 +115,41 @@ const cards = [
     content: <SkeletonOne />,
     className: "md:col-span-2",
     thumbnail: "/serengeti.jpg",
+    category: "Wildlife & Plains",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
     thumbnail: "/Ngorongoro.jpg",
+    category: "Landscapes",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
     thumbnail: "/Tarangire.jpg",
+    category: "Wildlife Encounters",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail: "/Kilimanjaro.webp",
+    category: "Mountain Expeditions",
   },
   {
     id: 5,
     content: <SkeletonFive />,
     className: "md:col-span-1",
     thumbnail: "/Manyara.jpg",
+    category: "Nature & Birds",
   },
   {
     id: 6,
     content: <SkeletonSix />,
     className: "md:col-span-2",
     thumbnail: "/zanzibar.jpg",
+    category: "Beaches & Relaxation",
   },
 ];

@@ -23,7 +23,12 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Quick Links</h4>
+            <h4 
+              className="font-bold text-lg mb-4 uppercase tracking-[3px]"
+              style={{ fontFamily: 'var(--font-montserrat)' }}
+            >
+              Quick Links
+            </h4>
             <ul className="space-y-2" style={{ color: '#f7e6cc' }}>
               <li><a href="#" className="transition" style={{ color: '#f7e6cc' }}>Home</a></li>
               <li><a href="#" className="transition" style={{ color: '#f7e6cc' }}>Safaris</a></li>
@@ -35,7 +40,12 @@ export default function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Destinations</h4>
+            <h4 
+              className="font-bold text-lg mb-4 uppercase tracking-[3px]"
+              style={{ fontFamily: 'var(--font-montserrat)' }}
+            >
+              Destinations
+            </h4>
             <ul className="space-y-2" style={{ color: '#f7e6cc' }}>
               <li><a href="#" className="transition" style={{ color: '#f7e6cc' }}>Serengeti</a></li>
               <li><a href="#" className="transition" style={{ color: '#f7e6cc' }}>Ngorongoro</a></li>
@@ -47,7 +57,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Contact Us</h4>
+            <h4 
+              className="font-bold text-lg mb-4 uppercase tracking-[3px]"
+              style={{ fontFamily: 'var(--font-montserrat)' }}
+            >
+              Contact Us
+            </h4>
             <div className="space-y-3" style={{ color: '#f7e6cc' }}>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5" style={{ color: '#c89b5e' }} />
@@ -69,13 +84,8 @@ export default function Footer() {
 
 
         {/* Bottom Footer */}
-        <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center text-sm" style={{ borderColor: '#c89b5e', color: '#f7e6cc' }}>
-          <p>&copy; 2025 Flexi Safaris. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="transition" style={{ color: '#f7e6cc' }} onMouseOver={(e) => e.currentTarget.style.color = '#c89b5e'} onMouseOut={(e) => e.currentTarget.style.color = '#f7e6cc'}>Privacy Policy</a>
-            <a href="#" className="transition" style={{ color: '#f7e6cc' }} onMouseOver={(e) => e.currentTarget.style.color = '#c89b5e'} onMouseOut={(e) => e.currentTarget.style.color = '#f7e6cc'}>Terms of Service</a>
-            <a href="#" className="transition" style={{ color: '#f7e6cc' }} onMouseOver={(e) => e.currentTarget.style.color = '#c89b5e'} onMouseOut={(e) => e.currentTarget.style.color = '#f7e6cc'}>Cookie Policy</a>
-          </div>
+        <div className="border-t pt-8 flex flex-col justify-center items-center text-sm gap-4" style={{ borderColor: '#c89b5e', color: '#f7e6cc' }}>
+          <p>&copy; Copyright 2026 | Flexi Safaris</p>
         </div>
       </div>
     </footer>
