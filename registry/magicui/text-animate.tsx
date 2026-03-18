@@ -85,8 +85,12 @@ export function TextAnimate({
     duration = 0.3,
     ...props
 }: TextAnimateProps) {
-    // eslint-disable-next-line react-hooks/static-components
-    const MotionComponent = useMemo(() => motion(Component), [Component]);
+    const MotionComponent = useMemo(() => {
+        if (typeof Component === "string" && (motion as any)[Component]) {
+            return (motion as any)[Component];
+        }
+        return motion(Component);
+    }, [Component]);
 
     const containerVariants: Variants = {
         hidden: {},
