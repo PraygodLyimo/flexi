@@ -131,12 +131,12 @@ export default function AboutUs() {
         {...fadeInUp}
       >
         <div className="max-w-6xl mx-auto">
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
             Flexi Safaris is a Tanzania-based safari and adventure travel operator dedicated to creating unforgettable
             experiences across East Africa&apos;s most spectacular landscapes. With deep local expertise and a passion for wildlife and culture,
             we craft tailored safari tours, nature expeditions, and cultural journeys that exceed expectations.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             We combine the authentic hospitality of Tanzania with flexible, customer centric service ensuring
             every traveler enjoys the beauty of Africa safely, responsibly, and memorably.
           </p>
@@ -149,7 +149,7 @@ export default function AboutUs() {
         {...fadeInUp}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+          <h2 className="text-5xl text-gray-900 mb-6 font-great-vibes">Our Mission</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             To provide exceptional safari and adventure experiences that honor the natural world,
             support local communities, and deliver personalized journeys that feel both enriching and effortless.
@@ -160,7 +160,7 @@ export default function AboutUs() {
       {/* Why Travel Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 className="text-3xl font-bold text-gray-900 mb-10" {...fadeInUp}>Why Travel with Flexi Safaris</motion.h2>
+          <motion.h2 className="text-5xl text-gray-900 mb-10 font-great-vibes" {...fadeInUp}>Why Travel with Flexi Safaris</motion.h2>
           <motion.div
             className="grid md:grid-cols-2 gap-8"
             variants={staggerContainer}
@@ -175,10 +175,10 @@ export default function AboutUs() {
                 variants={staggerItem}
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-[22px] font-bold text-gray-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">{item.description}</p>
+                <p className="text-gray-700 text-[15.5px] leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -188,7 +188,7 @@ export default function AboutUs() {
       {/* Signature Experiences Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 className="text-3xl font-bold text-gray-900 mb-10" {...fadeInUp}>Our Signature Experiences</motion.h2>
+          <motion.h2 className="text-5xl text-gray-900 mb-10 font-great-vibes" {...fadeInUp}>Our Signature Experiences</motion.h2>
           <motion.div
             className="grid md:grid-cols-3 gap-8 mb-8"
             variants={staggerContainer}
@@ -226,7 +226,7 @@ export default function AboutUs() {
       {/* Values Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="max-w-4xl mx-auto">
-          <motion.h2 className="text-3xl font-bold text-gray-900 mb-10" {...fadeInUp}>Our Values</motion.h2>
+          <motion.h2 className="text-5xl text-gray-900 mb-10 font-great-vibes" {...fadeInUp}>Our Values</motion.h2>
           <motion.div
             className="grid md:grid-cols-3 gap-8"
             variants={staggerContainer}
@@ -257,8 +257,8 @@ export default function AboutUs() {
         {...fadeInUp}
       >
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Commitment to Quality</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <h2 className="text-5xl text-gray-900 mb-8 font-great-vibes">Commitment to Quality</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
             Flexi Safaris operates with high professional standards:
           </p>
           <ul className="space-y-4">
@@ -278,7 +278,7 @@ export default function AboutUs() {
         {...fadeInUp}
       >
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Who We Serve</h2>
+          <h2 className="text-5xl text-gray-900 mb-6 font-great-vibes">Who We Serve</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             We welcome travelers from around the world — families, honeymooners, adventure seekers, solo explorers,
             and groups all looking for tailored safari journeys through Tanzania&apos;s iconic landscapes and wildlife havens.
@@ -292,7 +292,7 @@ export default function AboutUs() {
         {...fadeInUp}
       >
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#947846] mb-4">
+          <h2 className="text-5xl sm:text-6xl text-[#947846] mb-4 font-great-vibes">
             Ready for Your Adventure?
           </h2>
           <p className="text-[#947846] mb-8 text-lg">

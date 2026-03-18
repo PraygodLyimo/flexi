@@ -1,12 +1,21 @@
-'use client'
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function AdventureHero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5;
+    }
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Background video */}
       <div className="absolute inset-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
@@ -26,17 +35,16 @@ export default function AdventureHero() {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center">
         <motion.h1
-          className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl"
+          className="text-7xl md:text-9xl mb-8 text-white drop-shadow-2xl font-great-vibes"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          style={{ fontFamily: 'var(--font-montserrat)' }}
         >
-          Find Your Next Adventure
+          Find your next Adventure
         </motion.h1>
 
-        <p className="mb-8 max-w-2xl text-base text-white/90 sm:text-lg md:text-xl">
-          Curated nature-inspired journeys for the modern explorer.
+        <p className="mb-8 max-w-2xl text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-lg font-medium mx-auto">
+          Discover the wonders of Tanzania&apos;s wildlife with expert-led safaris across the Serengeti, Ngorongoro Crater, and beyond.
         </p>
 
       </div>

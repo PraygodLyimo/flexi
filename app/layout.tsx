@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import Navbar from "./pages/nav/page";
 import Footer from "./components/Footer";
@@ -20,6 +20,11 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Flexi Wild Safari",
@@ -34,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${greatVibes.variable} antialiased`}
       >
         <Navbar />
         {children}

@@ -17,12 +17,11 @@ export default function GalleryPage() {
           transition={{ duration: 0.8 }}
         >
           <h1 
-            className="text-5xl font-bold mb-4 tracking-[3px] uppercase" 
-            style={{ fontFamily: 'var(--font-montserrat)' }}
+            className="text-6xl mb-4 font-great-vibes" 
           >
             Our Safaris Gallery
           </h1>
-          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-800 max-w-2xl mx-auto leading-relaxed">
             <LoaderFive text="Immerse yourself in the visual wonders of the African savanna" />
           </p>
         </motion.div>
@@ -36,8 +35,8 @@ export default function GalleryPage() {
       {/* Footer Info */}
       <section className="py-20 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Bring Home These Memories</h2>
-            <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+            <h2 className="text-5xl text-gray-900 mb-6 font-great-vibes">Bring Home These memories</h2>
+            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Every photo tells a story of adventure, conservation, and the raw beauty of Tanzania. 
                 Ready to capture your own?
             </p>

@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative px-2 xl:px-4 py-2 text-white text-[11px] xl:text-xs font-medium transition-colors duration-300 uppercase tracking-[3px]"
+                className="group relative px-2 xl:px-4 py-2 text-white text-[13px] md:text-[14px] font-medium transition-colors duration-300 uppercase tracking-[3px]"
                 style={{ fontFamily: 'var(--font-montserrat)' }}
               >
                 <span>{link.label}</span>
@@ -64,7 +64,7 @@ export default function Navbar() {
 
             {/* Desktop Destinations Dropdown */}
             <div className="group relative px-3 xl:px-4 py-2">
-              <button className="flex items-center space-x-1 text-white text-[11px] xl:text-xs font-medium transition-colors duration-300 uppercase tracking-[3px]" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <button className="flex items-center space-x-1 text-white text-[13px] md:text-[14px] font-medium transition-colors duration-300 uppercase tracking-[3px]" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <span>DESTINATIONS</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -120,7 +120,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="block rounded-lg px-4 py-3 text-[13px] font-medium text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
+                  className="block rounded-lg px-4 py-3 text-[15px] font-medium text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
                   onClick={() => setIsMenuOpen(false)}
                   style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
@@ -132,7 +132,7 @@ export default function Navbar() {
               <div className="space-y-1">
                 <button
                   onClick={() => setIsDestinationsOpen(!isDestinationsOpen)}
-                  className="w-full text-left rounded-lg px-4 py-3 text-[13px] font-medium text-white hover:bg-white/10 transition-colors flex items-center justify-between uppercase tracking-[3px]"
+                  className="w-full text-left rounded-lg px-4 py-3 text-[15px] font-medium text-white hover:bg-white/10 transition-colors flex items-center justify-between uppercase tracking-[3px]"
                   style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                   <span>DESTINATIONS</span>

@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Flexi Safaris</h3>
-            <p style={{ color: '#f7e6cc' }}>
+            <h3 className="text-3xl font-bold mb-4 font-great-vibes text-white" style={{ textTransform: 'none', letterSpacing: 'normal' }}>Flexi Safaris</h3>
+            <p className="leading-relaxed" style={{ color: '#f7e6cc' }}>
               Crafting unforgettable African safari experiences since 2022. Founded by Jackson Robert.
             </p>
             <div className="mt-4 flex space-x-4">
@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 
-              className="font-bold text-[13px] md:text-[14px] mb-4 uppercase tracking-[3px]"
+              className="font-bold text-[15px] mb-6 uppercase tracking-[3px]"
               style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               Quick Links
@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Destinations */}
           <div>
             <h4 
-              className="font-bold text-[13px] md:text-[14px] mb-4 uppercase tracking-[3px]"
+              className="font-bold text-[15px] mb-6 uppercase tracking-[3px]"
               style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               Destinations
@@ -58,12 +58,12 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 
-              className="font-bold text-[13px] md:text-[14px] mb-4 uppercase tracking-[3px]"
+              className="font-bold text-[15px] mb-6 uppercase tracking-[3px]"
               style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               Contact Us
             </h4>
-            <div className="space-y-3" style={{ color: '#f7e6cc' }}>
+            <div className="space-y-3 leading-relaxed" style={{ color: '#f7e6cc' }}>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5" style={{ color: '#c89b5e' }} />
                 <span>Moshono, Arusha, Tanzania</span>

@@ -105,7 +105,7 @@ export default function Destinations() {
           className="text-center mb-16"
           {...fadeInUp}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-5xl sm:text-6xl text-gray-900 mb-4 font-great-vibes">
             Explore Our Destinations
           </h2>
           <p className="text-xl text-gray-600">
@@ -142,8 +142,8 @@ export default function Destinations() {
                   <div className="absolute inset-0 flex flex-col">
                     {/* Top Section */}
                     <div className="p-6 flex-1">
-                      <div className="text-3xl mb-4 font-bold">{destination.name}</div>
-                      <p className="text-white/90 mb-6">{destination.description}</p>
+                      <div className="text-[32px] mb-4 font-bold leading-tight">{destination.name}</div>
+                      <p className="text-white/90 mb-6 text-[15px] leading-relaxed">{destination.description}</p>
 
                       {/* Highlights */}
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 mb-4">

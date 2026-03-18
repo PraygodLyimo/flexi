@@ -89,7 +89,7 @@ export default function PopularItineraries() {
           className="text-center mb-16"
           {...fadeInUp}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-5xl sm:text-6xl text-gray-900 mb-4 font-great-vibes">
             Popular Safari Packages
           </h2>
           <p className="text-xl text-gray-600">
@@ -130,12 +130,12 @@ export default function PopularItineraries() {
               {/* Content */}
               <div className="p-4">
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-[22px] font-bold text-gray-900 mb-2">
                   {itinerary.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 text-[15px] mb-4 leading-relaxed">
                   {itinerary.description}
                 </p>
 

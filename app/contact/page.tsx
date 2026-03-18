@@ -62,8 +62,8 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-700">
+            <h1 className="text-6xl font-great-vibes mb-4">Contact Us</h1>
+            <p className="text-2xl text-gray-700 leading-relaxed">
               Get in touch with our safari experts
             </p>
           </motion.div>
@@ -118,11 +118,11 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Form */}
               <motion.div {...fadeInUp}>
-                <h2 className="text-4xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+                <h2 className="text-5xl text-gray-900 mb-8 font-great-vibes">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-[15px] font-bold text-gray-700 mb-2">
                         Your Name
                       </label>
                       <input
@@ -135,7 +135,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-[15px] font-bold text-gray-700 mb-2">
                         Email Address
                       </label>
                       <input
@@ -211,7 +211,7 @@ export default function ContactPage() {
 
               {/* FAQ Section */}
               <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+                <h2 className="text-5xl text-gray-900 mb-8 font-great-vibes">Frequently asked questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -240,8 +240,8 @@ export default function ContactPage() {
                     },
                   ].map((faq, idx) => (
                     <div key={idx} className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
-                      <p className="text-gray-700">{faq.a}</p>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{faq.q}</h3>
+                      <p className="text-gray-700 text-[15.5px] leading-relaxed">{faq.a}</p>
                     </div>
                   ))}
                 </div>
@@ -250,9 +250,9 @@ export default function ContactPage() {
 
             {/* Map Placeholder */}
             <div className="mt-20">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Location</h2>
+              <h2 className="text-5xl text-gray-900 mb-8 font-great-vibes">Our Location</h2>
               <div className="bg-gray-200 rounded-xl overflow-hidden h-96 flex items-center justify-center">
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-xl leading-relaxed">
                   Based in Arusha, Tanzania - Gateway to Safari Adventures
                 </p>
               </div>

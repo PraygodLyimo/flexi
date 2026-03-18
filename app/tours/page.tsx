@@ -199,11 +199,10 @@ export default function ToursPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl"
+            className="text-6xl md:text-8xl mb-6 text-white drop-shadow-2xl font-great-vibes"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            style={{ fontFamily: 'var(--font-montserrat)' }}
           >
             Our Safari Tours
           </motion.h1>
@@ -261,7 +260,7 @@ export default function ToursPage() {
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-6">
                       <div className="max-w-[70%]">
-                        <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                        <h2 className="text-3xl font-bold text-gray-900 leading-tight mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
                           {tour.title}
                         </h2>
                         <div className="flex items-center text-sm text-[#947846] font-semibold">
@@ -269,13 +268,13 @@ export default function ToursPage() {
                           {tour.destinations}
                         </div>
                       </div>
-                      <div className="text-right">
-                        <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">FROM</p>
-                        <p className="text-3xl font-bold text-[#947846]">${tour.price.toLocaleString()}</p>
-                      </div>
+                        <p className="text-right">
+                          <p className="text-[11px] text-gray-400 font-bold uppercase tracking-[2px] mb-1">FROM</p>
+                          <p className="text-4xl font-bold text-[#947846]">${tour.price.toLocaleString()}</p>
+                        </p>
                     </div>
 
-                    <p className="text-gray-600 mb-8 line-clamp-2 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    <p className="text-gray-600 mb-8 line-clamp-2 text-[15.5px] leading-relaxed" style={{ fontFamily: 'var(--font-montserrat)' }}>
                       {tour.description}
                     </p>
 

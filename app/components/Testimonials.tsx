@@ -79,8 +79,8 @@ export default function Testimonials() {
               ))}
             </div>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            What Travelers Say
+          <h2 className="text-5xl sm:text-6xl text-gray-900 mb-4 font-great-vibes">
+            What travelers say
           </h2>
           <p className="text-xl text-gray-600">
             Genuine reviews from our happy guests
@@ -111,7 +111,7 @@ export default function Testimonials() {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-gray-700 mb-6 italic leading-relaxed">
+                  <p className="text-gray-700 mb-6 italic text-[15.5px] leading-[1.7]">
                     "{testimonial.text}"
                   </p>
 

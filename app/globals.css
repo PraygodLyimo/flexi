@@ -159,6 +159,13 @@ button:hover {
   color: var(--accent-color);
 }
 
+.font-great-vibes {
+  font-family: var(--font-great-vibes), cursive;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
 /* -------------------------
    Safari Imagery Elements
 ------------------------- */
