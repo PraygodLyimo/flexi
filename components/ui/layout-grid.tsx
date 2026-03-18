@@ -37,8 +37,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               selected?.id === card.id
                 ? "rounded-lg cursor-default absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
-                ? "z-40 bg-white rounded-xl h-full w-full"
-                : "bg-white rounded-xl h-full w-full"
+                  ? "z-40 bg-white rounded-xl h-full w-full"
+                  : "bg-white rounded-xl h-full w-full"
             )}
             layoutId={`card-${card.id}`}
           >
@@ -72,13 +72,13 @@ const ImageComponent = ({ card }: { card: Card }) => {
         )}
         alt="thumbnail"
       />
-      
+
       {/* Category Overlay */}
       {card.category && (
         <div className="absolute inset-x-0 bottom-0 z-20 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-          <p 
-             className="text-white font-bold text-lg tracking-[3px] uppercase underline underline-offset-8 decoration-2 decoration-[#c89b5e] pb-2 drop-shadow-md"
-             style={{ fontFamily: 'var(--font-montserrat)' }}
+          <p
+            className="text-white font-bold text-lg tracking-[3px] uppercase underline underline-offset-8 decoration-2 decoration-[#c89b5e] pb-2 drop-shadow-md"
+            style={{ fontFamily: 'var(--font-montserrat)' }}
           >
             {card.category}
           </p>

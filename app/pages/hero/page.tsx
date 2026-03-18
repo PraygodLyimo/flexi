@@ -1,10 +1,12 @@
 'use client';
 
-import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export default function AdventureHero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const words = ["Adventure", "Safari", "Journey", "Experience", "Escape"];
 
   useEffect(() => {
     if (videoRef.current) {
@@ -37,15 +39,16 @@ export default function AdventureHero() {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center">
         <motion.h1
-          className="text-7xl md:text-9xl mb-8 text-white drop-shadow-2xl font-great-vibes"
+          className="text-7xl md:text-9xl mb-8 text-white drop-shadow-2xl font-great-vibes flex flex-col md:flex-row items-center justify-center gap-x-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          Find your next Adventure
+          <span>Find your next</span>
+          <FlipWords words={words} className="text-white font-great-vibes px-0" />
         </motion.h1>
 
-        <p className="mb-8 max-w-2xl text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-lg font-medium mx-auto">
+        <p className="mb-8 max-w-2xl text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-lg font-medium mx-auto" style={{ fontFamily: 'var(--font-montserrat)' }}>
           Discover the wonders of Tanzania&apos;s wildlife with expert-led safaris across the Serengeti, Ngorongoro Crater, and beyond.
         </p>
 

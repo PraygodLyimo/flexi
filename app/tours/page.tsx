@@ -1,9 +1,10 @@
 'use client';
 
-import { Star, MapPin, DollarSign, Calendar, Users, ChevronDown, ChevronUp, Check } from 'lucide-react';
+import { Star, MapPin, DollarSign, Calendar, Users, ChevronDown, ChevronUp, Check, Clock, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function ToursPage() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -150,17 +151,17 @@ export default function ToursPage() {
 
   return (
     <>
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 overflow-hidden">
+      <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 overflow-hidden">
         {/* Cinematic Background Image */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
-          style={{ backgroundImage: "url('/safari-hero.png')" }}
+          style={{ backgroundImage: "url('/serengeti.jpg')" }}
         >
           {/* Enhanced Overlay for readability */}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <motion.div
-          className="absolute inset-0 z-[1] opacity-20 bg-[url('/safari-pattern.png')] bg-repeat"
+          className="absolute inset-0 z-[1] opacity-25 bg-[url('/safari-pattern.png')] bg-repeat"
           animate={{
             backgroundPosition: ["0% 0%", "100% 100%"],
           }}
@@ -171,244 +172,183 @@ export default function ToursPage() {
           }}
         ></motion.div>
 
-        {/* Subtle floating shapes for background interest */}
+        {/* Dynamic Savannah Particles/Shapes */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#c89b5e]/20 rounded-full blur-3xl z-[1]"
+          className="absolute top-1/4 left-1/4 w-80 h-80 bg-[#c89b5e]/15 rounded-full blur-3xl z-[1]"
           animate={{
-            x: [0, 50, 0],
-            y: [0, 30, 0],
+            x: [0, 60, 0],
+            y: [0, 40, 0],
+            scale: [1, 1.1, 1],
           }}
           transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#475235]/10 rounded-full blur-3xl z-[1]"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, -60, 0],
-          }}
-          transition={{
-            duration: 20,
+            duration: 18,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
 
-        <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="relative z-10 max-w-5xl mx-auto">
           <motion.h1
-            className="text-6xl md:text-8xl mb-6 text-white drop-shadow-2xl font-great-vibes"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-7xl md:text-9xl mb-8 text-white drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] font-great-vibes"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
             Our Safari Tours
           </motion.h1>
-          <motion.p
-            className="text-xl md:text-2xl text-gray-100 max-w-2xl mx-auto font-medium drop-shadow-lg leading-relaxed mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            style={{ fontFamily: 'var(--font-montserrat)' }}
-          >
-            Experience the raw beauty of Tanzania's wilderness with our meticulously crafted luxury safari tours.
-          </motion.p>
+          <div className="max-w-3xl mx-auto mt-8">
+            <div className="text-xl md:text-2xl text-gray-100 font-medium leading-relaxed" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <TextGenerateEffect
+                words="Experience the raw beauty of Tanzania's wilderness with our meticulously crafted luxury safari tours."
+              />
+            </div>
+          </div>
           <motion.div
-            className="mt-8 h-1 w-24 bg-[#c89b5e] mx-auto rounded-full shadow-lg"
+            className="mt-12 h-1 w-32 bg-[#c89b5e] mx-auto rounded-full shadow-[0_0_20px_rgba(200,155,94,0.5)]"
             initial={{ width: 0 }}
-            animate={{ width: 96 }}
+            animate={{ width: 128 }}
             transition={{ duration: 1, delay: 0.5 }}
           ></motion.div>
         </div>
       </section>
+      
+      {/* Main Content with Premium Textures */}
+      <div className="relative min-h-screen bg-[#faf7f2] py-20">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/pattern-zebra.svg')] bg-repeat bg-[length:300px_300px]"></div>
 
-      {/* Main Content with subtle background */}
-      <div className="relative min-h-screen bg-[#faf7f2]">
-        {/* Simple subtle pattern or solid color */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/safari-pattern.png')] bg-repeat bg-[length:200px_200px]"></div>
-
-        {/* Tours Section */}
-        <section className="py-12 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-            >
-              {tours.map((tour) => (
-                <motion.div
-                  key={tour.id}
-                  className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden flex flex-col h-fit"
-                  variants={staggerItem}
-                  whileHover={{ y: -5, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)' }}
-                >
-                  {/* Tour Image */}
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image
-                      src={tour.image}
-                      alt={tour.title}
-                      fill
-                      className="object-cover"
-                    />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          >
+            {tours.map((tour) => (
+              <motion.div
+                key={tour.id}
+                variants={staggerItem}
+                className="group relative bg-white rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(148,120,70,0.3)] border border-gray-100/50"
+              >
+                {/* Image Section with stylized zoom */}
+                <div className="relative h-72 overflow-hidden">
+                  <Image
+                    src={tour.image}
+                    alt={tour.title}
+                    fill
+                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  
+                  {/* Floating Price Tag */}
+                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-white/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                    <span className="text-[#947846] font-bold text-xl">${tour.price}</span>
                   </div>
 
-                  {/* Card Content - Summary View */}
-                  <div className="p-8">
-                    <div className="flex justify-between items-start mb-6">
-                      <div className="max-w-[70%]">
-                        <h2 className="text-3xl font-bold text-gray-900 leading-tight mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                          {tour.title}
-                        </h2>
-                        <div className="flex items-center text-sm text-[#947846] font-semibold">
-                          <MapPin className="h-3 w-3 mr-1" />
-                          {tour.destinations}
-                        </div>
+                  {/* Rating Badge */}
+                  <div className="absolute bottom-6 left-6 flex items-center space-x-1 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                    <Star className="w-3.5 h-3.5 text-[#c89b5e] fill-[#c89b5e]" />
+                    <span className="text-white text-xs font-bold">{tour.rating}</span>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-8 relative">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#947846] transition-colors duration-300 pr-2">
+                    {tour.title}
+                  </h3>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center text-gray-600 text-sm font-medium">
+                      <div className="w-8 h-8 rounded-lg bg-[#f8ecdc] flex items-center justify-center mr-3 text-[#947846]">
+                        <Clock className="w-4 h-4" />
                       </div>
-                        <p className="text-right">
-                          <p className="text-[11px] text-gray-400 font-bold uppercase tracking-[2px] mb-1">FROM</p>
-                          <p className="text-4xl font-bold text-[#947846]">${tour.price.toLocaleString()}</p>
-                        </p>
+                      {tour.duration}
                     </div>
-
-                    <p className="text-gray-600 mb-8 line-clamp-2 text-[15.5px] leading-relaxed" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                      {tour.description}
-                    </p>
-
-                    <div className="flex items-center space-x-6 mb-8">
-                      <div className="flex items-center space-x-2">
-                        <div className="p-2 rounded-lg bg-[#fdf8f0]">
-                          <Calendar className="h-4 w-4 text-[#c89b5e]" />
-                        </div>
-                        <span className="text-sm font-bold text-gray-700">{tour.duration}</span>
+                    <div className="flex items-center text-gray-600 text-sm font-medium">
+                      <div className="w-8 h-8 rounded-lg bg-[#f8ecdc] flex items-center justify-center mr-3 text-[#947846]">
+                        <Users className="w-4 h-4" />
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="p-2 rounded-lg bg-[#fdf8f0]">
-                          <Users className="h-4 w-4 text-[#c89b5e]" />
-                        </div>
-                        <span className="text-sm font-bold text-gray-700">{tour.groupSize}</span>
-                      </div>
+                      {tour.groupSize}
                     </div>
-
-                    <div className="flex space-x-4">
-                      <motion.button
-                        className="flex-[2] py-4 px-6 rounded-2xl font-medium text-[11px] bg-[#947846] text-white shadow-lg shadow-[#947846]/20 relative overflow-hidden group uppercase tracking-[3px]"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
-                        whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <motion.span
-                          className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-12"
-                        />
-                        <span className="relative z-10">Book This package</span>
-                      </motion.button>
-                      <motion.button
-                        className="flex-1 py-4 px-4 rounded-2xl font-medium text-[11px] border-2 border-[#947846] text-[#947846] flex items-center justify-center space-x-2 relative overflow-hidden group transition-colors duration-300 uppercase tracking-[3px]"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
-                        whileHover={{
-                          scale: 1.05,
-                          backgroundColor: '#947846',
-                          color: '#ffffff',
-                          boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)'
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => toggleExpand(tour.id)}
-                      >
-                        <motion.span
-                          className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-12"
-                        />
-                        <span className="relative z-10">{expandedId === tour.id ? 'Hide' : 'Details'}</span>
-                        {expandedId === tour.id ? <ChevronUp className="h-4 w-4 relative z-10" /> : <ChevronDown className="h-4 w-4 relative z-10" />}
-                      </motion.button>
+                    <div className="flex items-center text-gray-600 text-sm font-medium">
+                      <div className="w-8 h-8 rounded-lg bg-[#f8ecdc] flex items-center justify-center mr-3 text-[#947846]">
+                        <MapPin className="w-4 h-4" />
+                      </div>
+                      {tour.destinations}
                     </div>
                   </div>
 
-                  {/* Expandable Details - ALL PACKAGE INFORMATION HERE */}
+                  {/* Highlights Summary */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {tour.highlights.slice(0, 3).map((h, i) => (
+                      <span key={i} className="px-3 py-1 bg-gray-50 text-gray-500 text-[10px] uppercase tracking-wider font-bold rounded-md border border-gray-100">
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Section */}
+                  <div className="flex items-center justify-between pt-6 border-t border-gray-50">
+                    <button
+                      onClick={() => toggleExpand(tour.id)}
+                      className="text-[#947846] font-bold text-sm tracking-widest uppercase hover:underline decoration-2 underline-offset-8 transition-all"
+                    >
+                      {expandedId === tour.id ? 'Hide Details' : 'View Details'}
+                    </button>
+                    <motion.button
+                      whileHover={{ scale: 1.05, x: 5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-12 h-12 rounded-full bg-[#947846] text-white flex items-center justify-center shadow-lg shadow-[#947846]/20"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </motion.button>
+                  </div>
+
+                  {/* Expandable Content */}
                   <AnimatePresence>
                     {expandedId === tour.id && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
-                        className="border-t border-gray-50 bg-[#fafafa]/80"
+                        transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                        className="overflow-hidden mt-6"
                       >
-                        <div className="p-8 space-y-10">
-                          {/* Full Experience */}
-                          <div>
-                            <div className="flex items-center space-x-2 mb-4">
-                              <span className="h-1 w-8 bg-[#c89b5e] rounded-full"></span>
-                              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">Full Experience</h3>
-                            </div>
-                            <p className="text-sm text-gray-600 leading-relaxed font-medium">{tour.fullDescription}</p>
-                          </div>
-
-                          {/* Highlights & Included */}
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div>
-                              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Highlights</h3>
-                              <div className="space-y-2">
-                                {tour.highlights.map((h, i) => (
-                                  <div key={i} className="flex items-center text-sm text-gray-700 font-medium">
-                                    <Star className="h-3 w-3 text-[#c89b5e] mr-2 fill-[#c89b5e]" />
-                                    {h}
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            <div>
-                              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">What's Included</h3>
-                              <div className="space-y-2">
-                                {tour.included.map((item, i) => (
-                                  <div key={i} className="flex items-center text-sm text-gray-700 font-medium">
-                                    <Check className="h-3 w-3 text-green-500 mr-2" />
-                                    {item}
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Detailed Itinerary */}
-                          <div>
-                            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Detailed Daily Itinerary</h3>
-                            <div className="space-y-6 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gray-100">
-                              {tour.itinerary.map((day, idx) => (
-                                <div key={idx} className="relative pl-12">
-                                  <div className="absolute left-0 top-1 h-[40px] w-[40px] rounded-full bg-white border-2 border-[#c89b5e] flex items-center justify-center z-10">
-                                    <span className="text-[10px] font-bold text-[#c89b5e]">D{day.day}</span>
-                                  </div>
-                                  <div>
-                                    <h4 className="text-sm font-bold text-gray-900 mb-1">{day.title}</h4>
-                                    <p className="text-xs text-gray-500 leading-relaxed font-medium">{day.desc}</p>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="pt-6 border-t border-gray-100 flex justify-between items-center text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-                            <span className="flex items-center">
-                              <DollarSign className="h-3 w-3 mr-1" />
-                              All Inclusive Pricing
-                            </span>
-                            <span className="flex items-center">
-                              <Users className="h-3 w-3 mr-1" />
-                              Small Group Guarantee
-                            </span>
+                        <div className="bg-[#f8ecdc]/30 p-6 rounded-2xl border border-[#947846]/10">
+                          <p className="text-gray-700 mb-6 leading-relaxed italic pr-2">
+                            "{tour.fullDescription}"
+                          </p>
+                          <div className="grid grid-cols-2 gap-4 text-xs">
+                             <div className="space-y-2">
+                               <p className="font-bold text-[#947846] tracking-widest uppercase">What's Included</p>
+                               {tour.included.map((item, i) => (
+                                 <div key={i} className="flex items-center text-gray-600">
+                                   <div className="w-1.5 h-1.5 rounded-full bg-[#c89b5e] mr-2" />
+                                   {item}
+                                 </div>
+                               ))}
+                             </div>
+                             <div className="space-y-2">
+                               <p className="font-bold text-[#947846] tracking-widest uppercase">Itinerary Preview</p>
+                               {tour.itinerary.slice(0, 3).map((day, i) => (
+                                 <div key={i} className="flex items-start text-gray-600">
+                                   <span className="font-bold mr-2">D{day.day}</span>
+                                   <span>{day.title}</span>
+                                 </div>
+                               ))}
+                               <p className="text-[#947846] font-medium mt-2">+ Many more days</p>
+                             </div>
                           </div>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </>
   );
