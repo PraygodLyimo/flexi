@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative px-2 xl:px-4 py-2 text-white text-[11px] xl:text-xs font-bold transition-colors duration-300 uppercase tracking-[3px]"
+                className="group relative px-2 xl:px-4 py-2 text-white text-[11px] xl:text-xs font-medium transition-colors duration-300 uppercase tracking-[3px]"
                 style={{ fontFamily: 'var(--font-montserrat)' }}
               >
                 <span>{link.label}</span>
@@ -64,7 +64,7 @@ export default function Navbar() {
 
             {/* Desktop Destinations Dropdown */}
             <div className="group relative px-3 xl:px-4 py-2">
-              <button className="flex items-center space-x-1 text-white text-[11px] xl:text-xs font-bold transition-colors duration-300 uppercase tracking-[3px]" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <button className="flex items-center space-x-1 text-white text-[11px] xl:text-xs font-medium transition-colors duration-300 uppercase tracking-[3px]" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <span>DESTINATIONS</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -73,7 +73,7 @@ export default function Navbar() {
                   <Link
                     key={dest.label}
                     href={dest.href}
-                    className="block px-4 py-2.5 text-gray-700 text-[11px] font-bold hover:text-[#947846] transition-colors uppercase tracking-[3px]"
+                    className="block px-4 py-2.5 text-gray-700 text-[11px] font-medium hover:text-[#947846] transition-colors uppercase tracking-[3px]"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                   >
                     {dest.label}
@@ -120,7 +120,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="block rounded-lg px-4 py-3 text-[13px] font-bold text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
+                  className="block rounded-lg px-4 py-3 text-[13px] font-medium text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
                   onClick={() => setIsMenuOpen(false)}
                   style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
@@ -132,7 +132,7 @@ export default function Navbar() {
               <div className="space-y-1">
                 <button
                   onClick={() => setIsDestinationsOpen(!isDestinationsOpen)}
-                  className="w-full text-left rounded-lg px-4 py-3 text-[13px] font-bold text-white hover:bg-white/10 transition-colors flex items-center justify-between uppercase tracking-[3px]"
+                  className="w-full text-left rounded-lg px-4 py-3 text-[13px] font-medium text-white hover:bg-white/10 transition-colors flex items-center justify-between uppercase tracking-[3px]"
                   style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                   <span>DESTINATIONS</span>
@@ -148,7 +148,7 @@ export default function Navbar() {
                       <Link
                         key={dest.label}
                         href={dest.href}
-                        className="block rounded px-4 py-2 text-[11px] font-bold text-white/80 hover:text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
+                        className="block rounded px-4 py-2 text-[11px] font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors uppercase tracking-[3px]"
                         onClick={() => {
                           setIsMenuOpen(false);
                           setIsDestinationsOpen(false);
@@ -164,7 +164,7 @@ export default function Navbar() {
 
               {/* Mobile Book Button */}
               <div className="pt-3 border-t border-white/10">
-                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-semibold transition-colors uppercase tracking-[3px]" style={{ backgroundColor: '#947846', color: '#f7e6cc', fontFamily: 'var(--font-montserrat)' }}>
+                <Link href="/book" className="block rounded-lg px-4 py-3 text-base font-medium transition-colors uppercase tracking-[3px]" style={{ backgroundColor: '#947846', color: '#f7e6cc', fontFamily: 'var(--font-montserrat)' }}>
                   BOOK ADVENTURE
                 </Link>
               </div>

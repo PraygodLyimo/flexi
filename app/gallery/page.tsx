@@ -42,7 +42,7 @@ export default function GalleryPage() {
                 Ready to capture your own?
             </p>
           <motion.button
-            className="font-bold py-4 px-10 rounded-full transition-all relative overflow-hidden group shadow-xl uppercase tracking-[3px]"
+            className="font-medium text-[11px] py-4 px-10 rounded-full transition-all relative overflow-hidden group shadow-xl uppercase tracking-[3px]"
             style={{ backgroundColor: "#947846", color: "#f7e6cc", fontFamily: 'var(--font-montserrat)' }}
             whileHover={{ scale: 1.05, boxShadow: "0 25px 30px -5px rgba(148, 120, 70, 0.3)" }}
             whileTap={{ scale: 0.95 }}

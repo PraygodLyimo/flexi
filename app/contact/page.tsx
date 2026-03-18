@@ -193,7 +193,7 @@ export default function ContactPage() {
 
                   <motion.button
                     type="submit"
-                    className="w-full font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-lg relative overflow-hidden group"
+                    className="w-full font-medium text-[11px] py-4 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-lg relative overflow-hidden group uppercase tracking-[3px]"
                     style={{ backgroundColor: '#947846', color: '#f7e6cc' }}
                     whileHover={{ scale: 1.02, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
                     whileTap={{ scale: 0.98 }}

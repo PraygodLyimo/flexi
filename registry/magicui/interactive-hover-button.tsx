@@ -17,7 +17,7 @@ export const InteractiveHoverButton = React.forwardRef<
         <button
             ref={ref}
             className={cn(
-                "group relative w-auto min-w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-2 px-6 text-center font-bold uppercase tracking-[3px]",
+                "group relative w-auto min-w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-2 px-6 text-center font-medium text-[10px] sm:text-[11px] uppercase tracking-[3px]",
                 className,
             )}
             style={{ fontFamily: 'var(--font-montserrat)' }}

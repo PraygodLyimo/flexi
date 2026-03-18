@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 
-              className="font-bold text-lg mb-4 uppercase tracking-[3px]"
+              className="font-bold text-[13px] md:text-[14px] mb-4 uppercase tracking-[3px]"
               style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               Quick Links
@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Destinations */}
           <div>
             <h4 
-              className="font-bold text-lg mb-4 uppercase tracking-[3px]"
+              className="font-bold text-[13px] md:text-[14px] mb-4 uppercase tracking-[3px]"
               style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               Destinations
@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 
-              className="font-bold text-lg mb-4 uppercase tracking-[3px]"
+              className="font-bold text-[13px] md:text-[14px] mb-4 uppercase tracking-[3px]"
               style={{ fontFamily: 'var(--font-montserrat)' }}
             >
               Contact Us

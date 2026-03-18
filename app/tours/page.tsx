@@ -296,7 +296,7 @@ export default function ToursPage() {
 
                     <div className="flex space-x-4">
                       <motion.button
-                        className="flex-[2] py-4 px-6 rounded-2xl font-bold text-sm bg-[#947846] text-white shadow-lg shadow-[#947846]/20 relative overflow-hidden group uppercase tracking-[3px]"
+                        className="flex-[2] py-4 px-6 rounded-2xl font-medium text-[11px] bg-[#947846] text-white shadow-lg shadow-[#947846]/20 relative overflow-hidden group uppercase tracking-[3px]"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                         whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(148, 120, 70, 0.4)' }}
                         whileTap={{ scale: 0.95 }}
@@ -307,7 +307,7 @@ export default function ToursPage() {
                         <span className="relative z-10">Book This package</span>
                       </motion.button>
                       <motion.button
-                        className="flex-1 py-4 px-4 rounded-2xl font-bold text-sm border-2 border-[#947846] text-[#947846] flex items-center justify-center space-x-2 relative overflow-hidden group transition-colors duration-300 uppercase tracking-[3px]"
+                        className="flex-1 py-4 px-4 rounded-2xl font-medium text-[11px] border-2 border-[#947846] text-[#947846] flex items-center justify-center space-x-2 relative overflow-hidden group transition-colors duration-300 uppercase tracking-[3px]"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                         whileHover={{
                           scale: 1.05,
